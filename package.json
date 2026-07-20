@@ -1,0 +1,16 @@
+{
+  "name": "byhainam",
+  "version": "1.0.0",
+  "description": "byhainam.com — static site with markdown-driven Letters blog + Decap CMS",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.6"
+  }
+}

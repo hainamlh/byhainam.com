@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Nơi lưu ảnh khi anh chèn vào bài viết
+media_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: https://byhainam.com
+display_url: https://byhainam.com
+logo_url: /avatar.jpg
+
+locale: "vi"
+
+collections:
+  - name: "letters"
+    label: "Letters (Blog)"
+    label_singular: "Bài viết"
+    folder: "content/letters"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Mô tả ngắn (hiện dưới tiêu đề & ở thẻ bài viết)", name: "dek", widget: "text" }
+      - { label: "Thời gian đọc", name: "read", widget: "string", default: "3 phút đọc" }
+      - label: "Màu thẻ minh hoạ"
+        name: "bg"
+        widget: "select"
+        default: "light"
+        options:
+          - { label: "Tối (đen)", value: "dark" }
+          - { label: "Sáng (trắng)", value: "light" }
+          - { label: "Xanh lá nhạt", value: "light-green" }
+          - { label: "Đỏ nhạt", value: "light-red" }
+      - label: "Nội dung bài viết"
+        name: "body"
+        widget: "markdown"
+        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image"]
