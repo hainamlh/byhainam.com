@@ -46,6 +46,7 @@ function loadPosts() {
       dek: data.dek || '',
       read: data.read || '3 phút đọc',
       bg: data.bg || 'light',
+      image: data.image || '',
       bodyMd: content.trim(),
     };
   });
@@ -64,10 +65,15 @@ function renderPostPage(post, tmpl) {
 }
 
 function cardHtml(post, hidden) {
-  const preset = PRESETS[post.bg] || PRESETS.light;
   const cls = hidden ? 'blog-card blog-hidden' : 'blog-card';
+  const tile = post.image
+    ? `<div class="blog-tile"><img src="${post.image}" alt="${post.title}"></div>`
+    : (() => {
+        const preset = PRESETS[post.bg] || PRESETS.light;
+        return `<div class="blog-tile" style="background:${preset.bg};${preset.border}"><span style="color:${preset.color}">${ICON}</span></div>`;
+      })();
   return `      <a href="/letters/${post.slug}/" class="${cls}">
-        <div class="blog-tile" style="background:${preset.bg};${preset.border}"><span style="color:${preset.color}">${ICON}</span></div>
+        ${tile}
         <h3>${post.title}</h3>
         <p>${post.dek}</p>
         <div class="blog-meta">${dateDisplay(post.date)} · ${post.read}</div>

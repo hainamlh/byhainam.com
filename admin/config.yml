@@ -26,6 +26,11 @@ collections:
       - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Mô tả ngắn (hiện dưới tiêu đề & ở thẻ bài viết)", name: "dek", widget: "text" }
       - { label: "Thời gian đọc", name: "read", widget: "string", default: "3 phút đọc" }
+      - label: "Hình ảnh tiêu đề (hiện ở thẻ bài viết ngoài trang chủ)"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Nếu không chọn ảnh, trang chủ sẽ tự dùng icon + màu nền bên dưới."
       - label: "Màu thẻ minh hoạ"
         name: "bg"
         widget: "select"
