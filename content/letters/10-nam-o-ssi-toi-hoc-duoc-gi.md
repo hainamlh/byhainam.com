@@ -14,4 +14,6 @@ Mười năm là đủ dài để chứng kiến vài chu kỳ tăng nóng, vài
 
 Từ đó, công việc của tôi dần chuyển từ "tìm cổ phiếu tốt" sang "xây hệ thống giúp khách hàng không tự phá hoại chính mình". Đó là công việc khó hơn nhiều, và ít được nói đến trong ngành này.
 
+![](/uploads/21.6.26.png)
+
 Nếu phải tóm gọn 10 năm trong một câu: *thị trường không phải là nơi bạn chứng minh mình thông minh, mà là nơi bạn chứng minh mình đủ kỷ luật để không cần chứng minh điều đó.*
