@@ -1,11 +1,11 @@
 :root{
-  --ink:#1A1A1A;
-  --ink-60:#5A5A54;
-  --ink-40:#9a9890;
-  --paper:#F7F5F0;
-  --card:#FFFFFF;
-  --line:#E2E0DB;
-  --line-strong:#c8c6c0;
+  --ink:#FFFFFF;
+  --ink-60:#A0A0A0;
+  --ink-40:#707070;
+  --paper:#000000;
+  --card:#000000;
+  --line:#333333;
+  --line-strong:#555555;
   --green:#1D9E75;
   --green-dark:#0F6E56;
   --green-light:#E1F5EE;
@@ -79,7 +79,6 @@ img{max-width:100%;display:block}
   text-transform:uppercase;color:var(--green-dark);margin-bottom:14px;
   display:flex;align-items:center;gap:8px;
 }
-.eyebrow::before{content:'';width:16px;height:1px;background:var(--green-dark)}
 
 /* ===== HERO (centered, statement-first) ===== */
 .hero{padding:64px 0 72px;text-align:center}
@@ -98,6 +97,7 @@ img{max-width:100%;display:block}
 .section{padding:56px 0}
 .section-hd{margin-bottom:40px;max-width:640px}
 .section-hd.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-hd.center .eyebrow{justify-content:center}
 .section-hd h2{font-family:'Lora',serif;font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:0 0 10px}
 .section-hd p{color:var(--ink-60);font-size:15px;line-height:1.7;margin:0}
 .section-alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -164,10 +164,10 @@ img{max-width:100%;display:block}
 .post-back:hover{color:var(--ink)}
 .post-hero h1{
   font-family:'Lora',serif;font-weight:500;font-size:clamp(28px,4.4vw,42px);
-  line-height:1.22;letter-spacing:-.01em;margin:0 0 18px;
+  line-height:1.22;letter-spacing:-.01em;margin:0 0 18px;text-align:justify;
 }
-.post-dek{font-size:17px;color:var(--ink-60);line-height:1.7;max-width:var(--read)}
-.post-body{padding:16px 0 64px;font-size:17px;line-height:1.85;color:#2a2a26}
+.post-dek{font-size:17px;color:var(--ink-60);line-height:1.7;max-width:var(--read);text-align:justify;}
+.post-body{padding:16px 0 64px;font-size:17px;line-height:1.85;color:var(--ink);text-align:justify;}
 .post-body p{margin:0 0 22px}
 .post-body h2{font-family:'Lora',serif;font-weight:500;font-size:24px;margin:44px 0 16px;letter-spacing:-.01em}
 .post-body strong{color:var(--ink);font-weight:600}
@@ -182,7 +182,7 @@ img{max-width:100%;display:block}
 .post-cta div p{margin:0;font-size:14px;color:var(--ink-60)}
 .post-cta div h4{font-family:'Lora',serif;font-weight:500;font-size:18px;margin:0 0 4px}
 .btn-solid{
-  background:var(--ink);color:#fff;padding:11px 22px;border-radius:100px;
+  background:var(--ink);color:#000;padding:11px 22px;border-radius:100px;
   font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;
   white-space:nowrap;
 }
