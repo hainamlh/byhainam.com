@@ -100,8 +100,8 @@ img{max-width:100%;display:block}
 .section-hd.center .eyebrow{justify-content:center}
 .section-hd h2{font-family:'Lora',serif;font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:0 0 10px}
 .section-hd p{color:var(--ink-60);font-size:15px;line-height:1.7;margin:0}
-.section-alt{background:var(--card);border-top:2px solid var(--line-strong);border-bottom:2px solid var(--line-strong);}
-.section-alt .wrap{padding-top:56px;padding-bottom:56px;}
+.section-alt{background:var(--card);}
+.section-alt .wrap{padding-top:56px;padding-bottom:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 
 /* ===== PRODUCTS (2 blocks, side by side) ===== */
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
