@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: hainamlh/byhainam.com
   branch: main
+  base_url: https://byhainam-oauth.hainamlh.workers.dev
 
 # Nơi lưu ảnh khi anh chèn vào bài viết
 media_folder: "uploads"
