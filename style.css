@@ -198,7 +198,7 @@ img{max-width:100%;display:block}
   background:#111111;
 }
 .blog-tile img{width:100%;height:100%;object-fit:cover;}
-.blog-card h3{font-family:'Lora',serif;font-weight:500;font-size:17px;margin:0 0 6px;letter-spacing:-.01em;line-height:1.35}
+.blog-card h3{font-family:'Lora',serif;font-weight:500;font-size:19px;margin:0 0 6px;letter-spacing:-.01em;line-height:1.35}
 .blog-card:hover h3{color:var(--green-dark)}
 .blog-card p{font-size:13.5px;color:var(--ink-60);line-height:1.6;margin:0 0 10px}
 .blog-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-40)}
