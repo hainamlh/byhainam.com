@@ -12,6 +12,8 @@ Mười năm ngồi ở vị trí tư vấn, quản lý một đội 30 người
 
 Tôi đã sai.
 
+//Sửa Header 2 3//
+
 ### Buổi chiều thứ Ba đổi cách tôi nhìn nhà đầu tư
 
 Tôi nhớ khá rõ buổi làm việc đó - một khách hàng mới tôi mới chỉ đồng hành khoảng một năm, tài khoản thuộc nhóm lớn nhất tôi quản lý, gọi điện giữa lúc thị trường đang có một nhịp giảm mạnh. Nhiều khách hàng khác của tôi hôm đó gọi đến với cùng một câu hỏi: "Có nên cắt lỗ ngay không, thoát ra trước khi giá giảm sâu hơn?"
