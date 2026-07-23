@@ -12,7 +12,7 @@ Mười năm ngồi ở vị trí tư vấn, quản lý một đội 30 người
 
 Tôi đã sai.
 
-//Sửa Header 2 3//
+//Sửa Header 2 3// Tăng độ đậm, độ lớn
 
 ### Buổi chiều thứ Ba đổi cách tôi nhìn nhà đầu tư
 
