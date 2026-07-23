@@ -170,7 +170,10 @@ img{max-width:100%;display:block}
 .post-dek{font-size:17px;color:var(--ink-60);line-height:1.7;max-width:var(--read);text-align:left;margin:0 auto;}
 .post-body{padding-top:16px;padding-bottom:64px;font-size:17px;line-height:1.85;color:var(--ink);text-align:left;max-width:var(--read);margin:0 auto;}
 .post-body p{margin:0 0 22px}
+.post-body h1{font-family:'Lora',serif;font-weight:700;font-size:32px;margin:48px 0 18px;letter-spacing:-.01em;line-height:1.25}
 .post-body h2{font-family:'Lora',serif;font-weight:500;font-size:24px;margin:44px 0 16px;letter-spacing:-.01em}
+.post-body h3{font-family:'Lora',serif;font-weight:600;font-size:20px;margin:36px 0 14px;letter-spacing:-.01em}
+.post-body h4{font-family:'Inter',sans-serif;font-weight:700;font-size:15px;margin:28px 0 10px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-60)}
 .post-body strong{color:var(--ink);font-weight:600}
 .post-body blockquote{
   margin:32px 0;padding:4px 0 4px 22px;border-left:2px solid var(--green);
