@@ -69,3 +69,5 @@ Bạn không cần một tài khoản tám chữ số để bắt đầu tư duy
 Nếu bạn làm được điều đó một cách nhất quán trong ba tháng tới, bạn sẽ không thắng thị trường nhanh hơn. Nhưng bạn sẽ bắt đầu nhận ra: phần lớn những đêm mất ngủ trong đầu tư không đến từ việc thị trường đi sai hướng — mà đến từ việc bạn bước vào một vị thế mà không bao giờ tự hỏi mình câu hỏi đó trước.
 
 Đó là nơi mọi nhà đầu tư kỷ luật tôi từng gặp đã bắt đầu — không phải bằng một chiến thắng lớn, mà bằng một câu hỏi nhỏ, được hỏi đúng lúc, mỗi lần, không ngoại lệ.
+
+Byhainam
