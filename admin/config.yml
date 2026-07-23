@@ -22,7 +22,8 @@ collections:
     create: true
     slug: "{{slug}}"
     summary: "{{title}} — {{date}}"
-    sortable_fields: ["date", "title"]
+    editor:
+         preview: false
     fields:
       - { label: "Tiêu đề", name: "title", widget: "string" }
       - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
