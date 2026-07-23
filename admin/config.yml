@@ -22,8 +22,16 @@ collections:
     create: true
     slug: "{{slug}}"
     summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Theo năm"
+        field: date
+        pattern: '\d{4}'
+      - label: "Theo tháng"
+        field: date
+        pattern: '\d{4}-\d{2}'
     editor:
-         preview: false
+      preview: false
     fields:
       - { label: "Tiêu đề", name: "title", widget: "string" }
       - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
@@ -46,5 +54,5 @@ collections:
       - label: "Nội dung bài viết"
         name: "body"
         widget: "markdown"
-        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        buttons: ["bold", "italic", "link", "heading-one", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
