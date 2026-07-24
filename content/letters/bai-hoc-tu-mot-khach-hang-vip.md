@@ -4,6 +4,7 @@ date: 2026-03-08
 dek: Người có nhiều vốn nhất không phải lúc nào cũng là người khó tư vấn nhất.
   Thường thì ngược lại.
 read: 4 phút đọc
+image: /uploads/a-man-is-calling-2.png
 bg: light-red
 ---
 Nếu bạn đang nghĩ rằng tài khoản của mình càng lớn thì bạn sẽ càng thận trọng, càng kỷ luật, càng "trưởng thành" hơn trong cách ra quyết định - tôi có một tin không vui: vốn không tự động tạo ra kỷ luật. Nó chỉ khuếch đại cái đang có sẵn trong bạn. Nếu bạn đang nóng vội với 50 triệu, bạn sẽ nóng vội gấp mười lần với 5 tỷ. Chỉ khác là lần này, cái giá phải trả không còn là một bài học rẻ.
@@ -23,6 +24,8 @@ Câu đầu tiên ông hỏi là: "Danh mục của tôi chịu đựng được
 Không phải "tôi sẽ lời thêm được bao nhiêu nếu lần này bắt đáy đúng". Không phải "cổ phiếu nào sẽ hồi trước". Ông hỏi về giới hạn chịu đựng của chính tài khoản mình, trước khi hỏi về cơ hội. Tôi đã tư vấn hàng trăm khách hàng trước đó, và phải thú nhận: đây là loại câu hỏi tôi ít gặp nhất, dù đáng lẽ nó phải phổ biến nhất.
 
 Cuộc gọi kéo dài mười hai phút. Ông không hỏi tôi dự đoán đáy ở đâu. Ông hỏi tôi ba điều: mức sụt giảm tài khoản tối đa nếu kịch bản xấu nhất xảy ra, cổ phiếu nào trong danh mục đang lệch khỏi kế hoạch ban đầu, và liệu quyết định giữ nguyên danh mục có phải vì kỷ luật không hay đang tự trấn an chính mình. Câu hỏi thứ ba đó — tôi phải dừng lại vài giây mới trả lời được, vì với câu hỏi rõ ràng đến vậy khi đứng trước một vị thế đang lỗ, tôi biết tôi đang làm việc với một bậc thầy đầu tư thực thụ.
+
+![](/uploads/a-man-is-calling-2.png)
 
 > Thị trường hồi phục ba tuần sau đó. Danh mục của ông gần như nguyên vẹn, không phải vì ông đoán đúng đáy, mà vì ông chưa bao giờ đặt cược đến mức phải đoán đúng đáy mới sống sót.
 
