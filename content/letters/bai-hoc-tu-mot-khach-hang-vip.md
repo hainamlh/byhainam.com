@@ -57,6 +57,8 @@ Người thứ nhất - gọi là kiểu "chứng minh mình đúng" - sẽ theo
 
 Cảm xúc chi phối lịch làm việc của họ: họ mở app lúc 9 giờ sáng với nhịp tim tăng, và đóng máy lúc 3 giờ chiều với cảm giác hoặc là hưng phấn hoặc là kiệt sức. Ba tháng sau, danh mục của họ có thể lời, có thể lỗ - nhưng dù kết quả nào, họ cũng không học được gì về chính mình, **vì quyết định của họ chưa bao giờ đến từ một khung tư duy nhất quán, mà đến từ cảm xúc của từng ngày.**
 
+![](/uploads/stress-man.jpg)
+
 Người thứ hai - kiểu tôi thấy ở phần lớn khách hàng VIP lâu năm của mình - nhìn thị trường giảm 15% và việc đầu tiên họ làm không phải là mở bảng giá, mà là mở lại kế hoạch phân bổ tài sản đã thiết kế từ trước. Câu hỏi của họ là: "Đợt giảm này có nằm trong kịch bản tôi đã tính đến không, hay đây là tín hiệu tôi cần điều chỉnh kế hoạch?" Nếu câu trả lời là "nằm trong kịch bản", họ gần như không cần làm gì cả - và đó chính là điều khiến họ khác biệt: khả năng giữ bản thân không hành động mới là quyết định đúng. 
 
 Sáu tháng sau, dù thị trường đi hướng nào, họ cũng có một dữ liệu rõ ràng để đối chiếu lại kế hoạch ban đầu của mình, vì mọi quyết định đều xuất phát từ một khung tư duy có thể kiểm chứng được - không phải từ cảm xúc của một buổi chiều thứ Ba.
@@ -76,7 +78,7 @@ Sự khiêm tốn đó không phải là rụt rè. Nó là một dạng kỷ lu
 Bạn không cần một tài khoản tám chữ số để bắt đầu tư duy như vậy. Bạn chỉ cần thay đổi một việc, ngay tuần này: trước khi mở bất kỳ vị thế mới nào, hãy viết ra một câu trả lời cho câu hỏi mà người khách hàng của tôi đã hỏi - 
 "Danh mục này chịu đựng được bao nhiêu phần trăm giảm nữa, trước khi phải bán giảm tỷ trọng?". Không cần công thức phức tạp, không cần phần mềm. Chỉ cần viết ra một con số cụ thể, và cam kết với chính mình rằng đó là giới hạn không thương lượng.
 
-![](/uploads/qlrr.png)
+![](/uploads/risk.jpg)
 
 Nếu bạn làm được điều đó một cách nhất quán trong ba tháng tới, bạn sẽ không thắng thị trường nhanh hơn. Nhưng bạn sẽ bắt đầu nhận ra: phần lớn những đêm mất ngủ trong đầu tư không đến từ việc thị trường đi sai hướng - mà đến từ việc bạn bước vào một vị thế mà không bao giờ tự hỏi mình đúng câu hỏi quan trọng nhất.
 
