@@ -4,6 +4,7 @@ date: 2026-03-22
 dek: Một kế hoạch được tôn trọng, dù không hoàn hảo, vẫn tốt hơn rất nhiều so
   với một kế hoạch bị lòng tham viết lại mỗi khi thị trường đi đúng hướng.
 read: 3 phút đọc
+image: /uploads/2people2.png
 bg: light
 ---
 Nếu bạn đã đạt mục tiêu lợi nhuận đề ra từ đầu năm, nhưng vẫn chưa chốt lời vì nghĩ "giá có thể còn lên nữa" — đây là câu hỏi tôi muốn bạn trả lời trước khi đọc tiếp: mục tiêu ban đầu của bạn là bao nhiêu phần trăm, và bạn đã vượt qua nó bao lâu rồi mà chưa hành động?
