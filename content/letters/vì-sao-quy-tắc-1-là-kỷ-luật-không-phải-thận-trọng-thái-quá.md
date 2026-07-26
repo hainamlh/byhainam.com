@@ -1,9 +1,8 @@
 ---
 title: Vì sao Quy tắc 1% là kỷ luật, không phải thận trọng thái quá
 date: 2026-04-28
-dek: Nếu bạn từng nghe đến quy tắc chỉ đặt cược rủi ro 1% vốn cho mỗi ý tưởng
-  đầu tư, và thầm nghĩ "sao ít vậy, thận trọng thái quá thì bao giờ mới giàu
-  được" - tôi hiểu phản ứng đó, vì tôi từng nghĩ y hệt vậy nhiều năm trước.
+dek: Quy tắc này không dành cho việc tối ưu một lệnh. Nó dành cho việc tối ưu
+  khả năng bạn còn ở trong cuộc chơi sau mười, hai mươi, năm mươi lệnh tiếp theo
 read: 3 phút đọc
 bg: light
 ---
