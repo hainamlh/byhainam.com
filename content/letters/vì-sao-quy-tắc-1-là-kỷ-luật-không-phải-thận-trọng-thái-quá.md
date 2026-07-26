@@ -7,11 +7,11 @@ dek: Nếu bạn từng nghe đến quy tắc chỉ đặt cược rủi ro 1% v
 read: 3 phút đọc
 bg: light
 ---
-Nếu bạn từng nghe đến quy tắc chỉ đặt cược rủi ro 1% vốn cho mỗi ý tưởng đầu tư, và thầm nghĩ "sao ít vậy, thận trọng thái quá thì bao giờ mới giàu được" - tôi hiểu phản ứng đó, vì tôi từng nghĩ y hệt vậy nhiều năm trước. Nhưng con số 1% không đến từ sự rụt rè. Nó đến từ một phép tính rất cụ thể về việc tài khoản của bạn có còn khả năng hồi phục hay không sau một lần sai.
+Nếu bạn từng nghe đến quy tắc chỉ đặt cược rủi ro 1% vốn cho mỗi ý tưởng đầu tư, và thầm nghĩ "sao ít vậy, thận trọng thái quá thì bao giờ mới giàu được" - tôi hiểu phản ứng đó, vì tôi từng nghĩ y hệt vậy nhiều năm trước. Nhưng con số 1% không đến từ sự rụt rè. Nó đến từ một phép tính rất cụ thể về việc tài khoản của bạn có còn khả năng hồi phục hay không sau một vài hay một chuỗi sai liên tiếp.
 
-# Toán học của việc mất tiền không đối xứng với toán học của việc kiếm lại
+# Toán học của việc mất tiền không đối xứng với toán học của việc kiếm tiền
 
-Đây là một sự thật ít người chậm lại để tính (mặc dù họ đã xem qua nhiều lần rồi!): mất 10% vốn, bạn cần lãi 11,1% để hòa vốn. Nghe không đáng ngại. Nhưng mất 25% vốn, bạn cần lãi 33,3% để quay lại điểm ban đầu. Mất 50% vốn - điều nhiều nhà đầu tư từng trải qua ít nhất một lần trong một cú sập mạnh - bạn cần lãi 100% chỉ để hòa vốn, không phải để có lãi.
+Đây là một sự thật ít người chậm lại để tính (mặc dù họ đã biết rồi!): mất 10%, bạn cần lãi 11,1% để hòa vốn. Nghe không đáng ngại. Nhưng mất 25% vốn, bạn cần lãi 33,3% để quay lại điểm ban đầu. Mất 50% vốn - điều nhiều nhà đầu tư từng trải qua ít nhất một lần trong một cú sập mạnh - bạn cần lãi 100% chỉ để hòa vốn, không phải để có lãi.
 
 Mối quan hệ giữa mức lỗ và mức lãi cần để hồi phục không phải một đường thẳng. Nó là một đường cong dốc lên rất nhanh. Đó là lý do vì sao việc giữ mức lỗ tối đa của mỗi ý tưởng đầu tư ở một con số nhỏ - 1%, tối đa 2,5% tùy khả năng chịu đựng rủi ro của từng người - không phải vì bạn yếu bóng vía. Đó là vì ở ngưỡng đó, một lần sai gần như không để lại dấu vết nào trên đường cong hồi phục. Bạn có thể sai mười lần liên tiếp ở mức 1% và tài khoản chỉ giảm chưa đến 10% - vẫn hoàn toàn có khả năng quay lại. Nhưng chỉ cần hai, ba lần sai ở mức 20-30% mỗi lần, con đường hồi phục bắt đầu đòi hỏi những mức lãi phi thực tế.
 
