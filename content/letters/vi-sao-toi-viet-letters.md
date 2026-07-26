@@ -4,7 +4,7 @@ date: 2026-05-02
 dek: Không phải để bán tín hiệu. Để nghĩ rõ ràng hơn — và có thể, giúp ai đó
   nghĩ rõ ràng hơn.
 read: 2 phút đọc
-image: /uploads/writingman.jpg
+image: /uploads/me.jpg
 bg: dark
 ---
 Nếu bạn từng đăng ký một bản tin tài chính nào đó, đọc được vài số đầu, rồi âm thầm xóa nó khỏi hộp thư mà không nhận ra mình đã ngừng đọc từ bao giờ - bạn không phải người duy nhất, và vấn đề thường không nằm ở bạn. Phần lớn nội dung tài chính được viết ra để lấp đầy một lịch đăng bài, không phải vì người viết thực sự có điều gì cần nói lúc đó. Người đọc cảm nhận được sự khác biệt đó rất nhanh, dù không phải lúc nào cũng gọi tên được nó.
