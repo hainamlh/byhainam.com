@@ -1,5 +1,5 @@
 ---
-title: Lòng tham không đến khi bạn thua — nó đến khi bạn thắng
+title: Lòng tham không đến khi bạn thua - nó đến khi bạn thắng
 date: 2026-03-22
 dek: Một kế hoạch được tôn trọng, dù không hoàn hảo, vẫn tốt hơn rất nhiều so
   với một kế hoạch bị lòng tham viết lại mỗi khi thị trường đi đúng hướng.
