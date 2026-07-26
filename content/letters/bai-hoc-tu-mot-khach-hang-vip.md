@@ -1,5 +1,5 @@
 ---
-title: Bài học lớn nhất tôi học được đến từ khách hàng giàu nhất
+title: Bài học lớn nhất tôi học được đến từ khách hàng
 date: 2026-03-08
 dek: Người có nhiều vốn nhất không phải lúc nào cũng là người khó tư vấn nhất.
   Thường thì ngược lại.
