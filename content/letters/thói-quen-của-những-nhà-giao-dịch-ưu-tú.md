@@ -11,9 +11,9 @@ Các nhà giao dịch ưu tú không phải ngẫu nhiên mà vươn lên đư�
 
 Kết quả xuất sắc của họ đến từ một tập hợp các thói quen, kỷ luật và khung tâm lý tích lũy qua nhiều năm luyện tập có chủ đích.
 
-Trong khi hầu hết các nhà giao dịch khác đi tìm lối tắt thì các nhà giao dịch thành công xây dựng các hệ thống hỗ trợ sự nhất quán, rõ ràng và bền lâu.
+> Trong khi hầu hết các nhà giao dịch khác đi tìm đường tắt bằng những khoản lợi nhuận lớn trong thời gian ngắn thì các nhà giao dịch thành công xây dựng các hệ thống hỗ trợ sự nhất quán, rõ ràng và bền lâu.
 
-Dưới đây là 13 thói quen điều này luôn phân biệt các nghệ sĩ xuất sắc với phần còn lại.
+Dưới đây là 13 thói quen phân biệt các nhà giao dịch xuất sắc với phần còn lại:
 
 ## 1. Họ yêu thích công việc
 
