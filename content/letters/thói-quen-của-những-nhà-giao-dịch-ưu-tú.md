@@ -21,11 +21,11 @@ Dưới đây là 13 thói quen phân biệt các nhà giao dịch xuất sắc 
 
 ## 2. Họ duy trì cân bằng cuộc sống
 
-Giao dịch là một công việc cần sự tập trung cao độ trong thời gian dài, nhưng nó không phải là toàn bộ cuộc sống. Họ trân trọng và dành nhiều thời gian bên gia đình và bạn bè, họ biết rằng sự ổn định cảm xúc bên ngoài thị trường sẽ củng cố khả năng ra quyết định bên trong họ.
+Giao dịch là một công việc cần sự tập trung cao độ trong thời gian dài, nhưng đây không phải là toàn bộ cuộc sống. Họ trân trọng và dành nhiều thời gian bên gia đình và bạn bè, họ biết rằng sự ổn định cảm xúc bên ngoài thị trường sẽ củng cố khả năng ra quyết định bên trong họ.
 
 ## 3. Họ học hỏi từ những nhà giao dịch giỏi hơn
 
-Họ nghiên cứu những người đi trước - những người cố vấn, những huyền thoại của thị trường, và những đồng nghiệp mà luôn có lợi nhuận. Họ tiếp thu các nguyên tắc, điều chỉnh lại phù hợp và đẩy nhanh quá trình phát triển thông qua việc tiếp xúc với các tiêu chuẩn cao hơn.
+Họ nghiên cứu những người đi trước - những người cố vấn, những huyền thoại, và những đồng nghiệp có lợi nhuận tốt. Họ tiếp thu các nguyên tắc, điều chỉnh phù hợp và đẩy nhanh quá trình phát triển thông qua việc tiếp xúc với các tiêu chuẩn cao hơn.
 
 ## 4. Họ duy trì tư duy tích cực, kỷ luật
 
@@ -33,7 +33,7 @@ Mất mát không làm họ sụp đổ. Họ xem xét, điều chỉnh và đư
 
 ## 5. Họ tập trung vào cải tiến liên tục
 
-Các nhà giao dịch ưu tú không cải tổ hệ thống. Họ chỉ thực hiện những nâng cấp nhỏ, từng bước một - siết chặt các điểm vào lệnh, tinh chỉnh rủi ro, cải thiện hiệu quả thực thi - và tích lũy những cải tiến đó theo thời gian.
+Các nhà giao dịch ưu tú không cải tổ hệ thống. Họ chỉ thực hiện những nâng cấp nhỏ, từng bước một - siết chặt các điểm vào lệnh, tinh chỉnh rủi ro, cải thiện năng thực thi - và tích lũy những cải tiến đó theo thời gian.
 
 ## 6. Họ theo dõi tiến trình một cách chính xác
 
@@ -41,7 +41,7 @@ Luôn luôn ghi chép nhật ký giao dịch! Chúng đo lường hiệu suất 
 
 ## 7. Họ giữ cho hệ thống đơn giản
 
-Sự phức tạp tạo ra sự nhầm lẫn. Những nhà giao dịch thành công loại bỏ các yếu tố gây nhiễu động và dựa vào các quy trình tinh gọn, dễ dàng lặp lại, những thứ này giúp họ thực hiện giao dịch một cách tự tin.
+Càng phức tạp càng tạo ra sự nhầm lẫn. Những nhà giao dịch thành công loại bỏ các yếu tố gây nhiễu động và dựa vào các quy trình tinh gọn, dễ dàng lặp lại, những thứ này giúp họ thực hiện giao dịch một cách tự tin.
 
 ## 8. Họ giao dịch trong vùng an toàn của mình
 
@@ -65,4 +65,4 @@ Không do dự. Khi hệ thống của họ đưa ra tín hiệu, họ thực hi
 
 ## 13. Họ theo đuổi lợi nhuận thực tế, khả thi
 
-Các nhà giao dịch ưu tú không chạy theo tưởng tượng. Họ hướng tới tăng trưởng ổn định, bền vững - kiểu tăng trưởng tích lũy qua nhiều năm, chứ không phải vài ngày.
+Các nhà giao dịch ưu tú không chạy theo những khoản lợi nhuận trong tưởng tượng. Họ hướng tới tăng trưởng ổn định, bền vững - kiểu tăng trưởng tích lũy qua nhiều năm, chứ không phải vài ngày.
