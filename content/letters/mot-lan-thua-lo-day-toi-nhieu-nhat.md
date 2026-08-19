@@ -1,8 +1,8 @@
 ---
-title: Khoản lỗ dạy tôi nhiều nhất
+title: Bài học lớn nhất từ một khoản thua lỗ
 date: 2026-04-18
-dek: Không phải khoản lỗ lớn nhất. Mà là khoản lỗ nhỏ khiến tôi viết lại toàn bộ
-  quy trình vào lệnh.
+dek: Không phải khoản lỗ lớn nhất, mà là khoản lỗ nhỏ đã khiến tôi viết lại toàn
+  bộ quy trình vào lệnh của mình.
 read: 4 phút đọc
 image: /uploads/funel.jpg
 bg: light-green
