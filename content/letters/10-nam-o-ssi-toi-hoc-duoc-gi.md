@@ -1,14 +1,16 @@
 ---
-title: "10 năm ở SSI, tôi học được gì"
+title: 10 năm ở SSI, tôi học được gì
 date: 2026-05-28
-dek: "Không phải một chiến lược thần kỳ. Mà là một tập hợp những sai lầm tôi chỉ được phép mắc một lần."
-read: "5 phút đọc"
-bg: "light"
+dek: Không phải một chiến lược thần kỳ. Mà là một tập hợp những sai lầm tôi chỉ
+  được phép mắc một lần.
+read: 5 phút đọc
+image: /uploads/rsline.png
+bg: light
 ---
-Mười năm là đủ dài để chứng kiến vài chu kỳ tăng nóng, vài lần thị trường sụp đổ, và hàng trăm khách hàng đi qua đủ loại cảm xúc — hưng phấn, sợ hãi, hối tiếc.
+Mười năm là đủ dài để chứng kiến vài chu kỳ tăng nóng, vài lần thị trường sụp đổ, và hàng trăm khách hàng đi qua đủ loại cảm xúc - hưng phấn, sợ hãi, hối tiếc.
 
-Điều tôi nhớ nhất không phải là những thương vụ thắng lớn. Mà là những lần tôi phải ngồi đối diện một khách hàng vừa mất một khoản đáng kể, và nhận ra phần lớn thiệt hại đến từ việc **không có kế hoạch trước khi vào lệnh**, chứ không phải từ việc chọn sai cổ phiếu.
+Bên cạnh những thương vụ thắng lớn, điều tôi nhớ nhất còn là những lần phải nghe điện thoại, phải ngồi đối diện một vài khách hàng mới thua lỗ những khoản vốn lớn, và nhận ra phần lớn thiệt hại đến từ việc **không có kế hoạch trước khi vào lệnh**, chứ không phải từ việc chọn sai cổ phiếu.
 
-Từ đó, công việc của tôi dần chuyển từ "tìm cổ phiếu tốt" sang "xây hệ thống giúp khách hàng không tự phá hoại chính mình". Đó là công việc khó hơn nhiều, và ít được nói đến trong ngành này.
+Từ đó, công việc của tôi dần chuyển từ "tìm cổ phiếu tốt" sang "xây hệ thống giao dịch" và truyền tải đầy đủ hệ thống đó đến với khách hàng, thứ giúp họ và tôi bảo vệ chính vốn đầu tư của họ. Đây là công việc khó hơn nhiều, cần nỗ lực và kiên trì (thuyết phục khách hàng hiểu) và ít được nói đến trong ngành này. Tất cả những thứ đang có trên thị trường là "hôm nay mua mã gì", khoe lãi, flex.
 
-Nếu phải tóm gọn 10 năm trong một câu: *thị trường không phải là nơi bạn chứng minh mình thông minh, mà là nơi bạn chứng minh mình đủ kỷ luật để không cần chứng minh điều đó.*
+Nếu phải tóm gọn 10 năm trong một câu thì đó là: *thị trường không phải là nơi bạn chứng minh mình thông minh, không phải là nơi để khoe lãi, đó là nơi các hệ thống giao dịch vận hành và tìm ra lợi thế dài hạn của nó.*
