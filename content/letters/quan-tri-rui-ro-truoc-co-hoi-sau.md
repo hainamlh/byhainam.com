@@ -1,5 +1,5 @@
 ---
-title: Quản trị rủi ro trước, cơ hội sau
+title: Quản trị rủi ro trước, nghĩ đến cơ hội sau
 date: 2026-06-20
 dek: Hệ thống được thiết kế quanh khả năng chịu đựng rủi ro — không phải quanh
   kỳ vọng lợi nhuận.
