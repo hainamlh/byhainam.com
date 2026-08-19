@@ -7,9 +7,13 @@ read: 3 phút đọc
 image: /uploads/anzaf.jpg
 bg: dark
 ---
-Nhiều người nghĩ mục tiêu cuối cùng của đầu tư là lợi nhuận. Sau 10 năm làm nghề, tôi tin mục tiêu thật sự là **một tâm trí không bị chi phối bởi bảng giá**.
+Nhiều người nghĩ mục tiêu cuối cùng của đầu tư là lợi nhuận. Nhưng tôi tin mục tiêu thật sự sẽ là **một tâm trí bình yên không bị chi phối bởi bảng giá**.
 
-Khi tài khoản đỏ, phần lớn người ta không đưa ra quyết định tệ vì thiếu kiến thức. Họ đưa ra quyết định tệ vì hoảng loạn — và hoảng loạn luôn tìm được lý do để nghe có vẻ hợp lý.
+Khi tài khoản đỏ, phần lớn người ta không đưa ra quyết định tệ vì thiếu kiến thức, mà vì hoảng loạn — và một khi đã hoảng loạn thì ta luôn tìm được lý do hợp lý để bào chữa cho quyết định sai của mình.
+
+Khi tài khoản xanh, phần lớn người ta cũng rơi vào trạng thái thỏa mãn - bắt đầu lơ là các tín hiệu nguy hiểm, và thay vào đó là nỗi lo sợ mất lãi đen xen với niềm vui chiến thắng.
+
+Đây là những cảm xúc không tốt cho sức khỏe tin thần của bất cứ một người nào.
 
 > Khi danh mục trong tầm kiểm soát và hiểu rõ những gì mình đang làm — sẽ không có khoản lỗ nào làm tê liệt khả năng đưa ra quyết định sáng suốt.
 
