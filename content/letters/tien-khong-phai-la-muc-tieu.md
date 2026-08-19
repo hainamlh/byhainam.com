@@ -1,8 +1,9 @@
 ---
-title: Lòng tham không đến khi bạn thua - nó đến khi bạn thắng
+title: Lòng tham xuất hiện khi chúng ta đang chiến thắng
 date: 2026-03-22
-dek: Một kế hoạch được tôn trọng, dù không hoàn hảo, vẫn tốt hơn rất nhiều so
-  với một kế hoạch bị lòng tham viết lại mỗi khi thị trường đi đúng hướng.
+dek: Một kế hoạch được tôn trọng, dù nếu nó không hoàn hảo thì vẫn tốt hơn rất
+  nhiều so với một kế hoạch bị lòng tham sửa lại mỗi khi thị trường đi đúng
+  hướng.
 read: 3 phút đọc
 image: /uploads/2people2.png
 bg: light
