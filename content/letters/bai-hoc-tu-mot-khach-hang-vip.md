@@ -4,7 +4,7 @@ date: 2026-03-08
 dek: Người có nhiều vốn nhất không phải lúc nào cũng là người khó tư vấn nhất.
   Thường thì ngược lại.
 read: 4 phút đọc
-image: /uploads/mancalling3.jpg
+image: /uploads/a-man-is-calling-2.png
 bg: light-red
 ---
 Nếu bạn đang nghĩ rằng tài khoản của mình càng lớn thì bạn sẽ càng thận trọng, càng kỷ luật, càng "trưởng thành" hơn trong cách ra quyết định - tôi có một tin không vui: vốn không tự động tạo ra kỷ luật. Nó chỉ khuếch đại cái đang có sẵn trong bạn. Nếu bạn đang nóng vội với 50 triệu, bạn sẽ nóng vội gấp mười lần với 5 tỷ. Chỉ khác là lần này, cái giá phải trả không còn là một bài học rẻ.
