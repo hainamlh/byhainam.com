@@ -1,9 +1,11 @@
 ---
-title: "Tâm trí bình yên, vui vẻ là điều quan trọng nhất"
+title: Tâm trí bình yên, vui vẻ là điều quan trọng nhất
 date: 2026-07-18
-dek: "Khi danh mục trong tầm kiểm soát, không khoản lỗ nào có thể làm tê liệt khả năng ra quyết định sáng suốt."
-read: "3 phút đọc"
-bg: "dark"
+dek: Khi danh mục trong tầm kiểm soát, không khoản lỗ nào có thể làm tê liệt khả
+  năng ra quyết định sáng suốt.
+read: 3 phút đọc
+image: /uploads/anzaf.jpg
+bg: dark
 ---
 Nhiều người nghĩ mục tiêu cuối cùng của đầu tư là lợi nhuận. Sau 10 năm làm nghề, tôi tin mục tiêu thật sự là **một tâm trí không bị chi phối bởi bảng giá**.
 
