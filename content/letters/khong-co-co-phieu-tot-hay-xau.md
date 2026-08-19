@@ -1,10 +1,13 @@
 ---
-title: "Không có cổ phiếu tốt hay xấu — chỉ có tăng giá hoặc không"
+title: Không có cổ phiếu tốt hay xấu - chỉ có tăng giá hoặc không
 date: 2026-06-29
-dek: "Một trong những bài học khó chấp nhận nhất khi mới vào nghề: doanh nghiệp tốt không đồng nghĩa là một khoản đầu tư tốt."
-read: "3 phút đọc"
-bg: "light-red"
+dek: "Một trong những bài học khó chấp nhận nhất khi mới vào nghề: doanh nghiệp
+  tốt không đồng nghĩa là một khoản đầu tư tốt."
+read: 3 phút đọc
+bg: light-red
 ---
+Quy trình của một người tham gia thị trường chứng khoán thường sẽ là: mua thử -> lãi -> mua thật -> lỗ -> tìm công ty tốt mua -> lỗ, nhìn thấy công ty không tốt tăng giá -> bối rối.
+
 Nhiều năm trước, tôi từng nắm giữ cổ phiếu của một doanh nghiệp mà tôi thực sự ngưỡng mộ. Ban lãnh đạo giỏi, sản phẩm tốt, thị phần tăng đều. Trên giấy tờ, đó là một công ty xuất sắc. Trên bảng giá, cổ phiếu đó đi ngang suốt hai năm.
 
 Tôi đã học được điều này theo cách khó nhất: **một doanh nghiệp tốt và một khoản đầu tư tốt là hai thứ hoàn toàn khác nhau.**
