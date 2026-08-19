@@ -1,5 +1,5 @@
 ---
-title: Kỷ luật không phải tính cách - nó là một hệ thống bạn thiết kế
+title: Kỷ luật không phải tính cách - nó là một hệ thống
 date: 2026-04-05
 dek: Bạn không cần sinh ra kỷ luật. Bạn cần một hệ thống khiến kỷ luật trở thành
   lựa chọn dễ dàng hơn.
