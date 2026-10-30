@@ -277,7 +277,7 @@ function build() {
 ${books.slice(0, 3).map(b => bookMiniCardHtml(b, '/sach/')).join('\n')}
     </div>
     <div class="load-more-wrap">
-      <a href="/sach/" class="btn-load">Xem tất cả</a>
+      <a href="/sach/" class="btn-load">Load More</a>
     </div>
   </div>
 </section>` : '';
