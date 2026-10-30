@@ -1,5 +1,5 @@
 ---
-title: Giao dịch như một phù thủy chứng khoán (Trade Like a Stock Market Wizard)
+title: Trade Like a Stock Market Wizard - Giao dịch như một phù thủy chứng khoán
 date: 2026-10-30
 dek: Thành công không đến từ việc mua thật nhiều cổ phiếu, mà đến từ khả năng
   nhận diện những cổ phiếu tốt nhất, mua đúng thời điểm, kiểm soát rủi ro và
