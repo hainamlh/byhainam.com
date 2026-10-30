@@ -150,6 +150,31 @@ function loadZaloUrl() {
   return data.zaloUrl || '';
 }
 
+// ---- các đoạn văn bản cố định trên trang chủ, chỉnh trong admin ("Cài đặt giao diện") ----
+// Xuống dòng trong ô nhập (Enter) -> <br> khi hiển thị.
+function nl2br(s) { return String(s).trim().replace(/\r\n/g, '\n').split('\n').join('<br>'); }
+const TEXT_DEFAULTS = {
+  heroTitle: 'Tâm trí bình yên, vui vẻ\nlà điều quan trọng nhất.',
+  heroDek: 'Khi danh mục trong tầm kiểm soát và hiểu rõ những gì mình đang làm, không khoản lỗ nào có thể làm tê liệt khả năng đưa ra quyết định sáng suốt.',
+  blogHeading: 'Những suy nghĩ, chia sẻ, bài học\ntừ cuộc sống và giao dịch cổ phiếu',
+  bookHeading: 'Những quyển sách về giao dịch, đầu tư\ntôi đã đọc và tâm đắc',
+  signatureName: 'Hải Nam',
+  signatureRole: 'Giám đốc Tư vấn đầu tư · SSI',
+  signatureTagline: 'Kỷ luật trước, lợi nhuận sau. Cảm ơn bạn đã đọc đến đây.',
+};
+function loadSiteTexts() {
+  let data = {};
+  if (fs.existsSync(SETTINGS_FILE)) {
+    data = matter(fs.readFileSync(SETTINGS_FILE, 'utf-8')).data || {};
+  }
+  const group = data.homeTextsGroup || {};
+  const out = {};
+  for (const key of Object.keys(TEXT_DEFAULTS)) {
+    out[key] = (group[key] && String(group[key]).trim()) ? group[key] : TEXT_DEFAULTS[key];
+  }
+  return out;
+}
+
 function tileHtml(post, tileClass) {
   if (post.image) return `<div class="${tileClass}"><img src="${post.image}" alt="${post.title}"></div>`;
   const preset = PRESETS[post.bg] || PRESETS.light;
@@ -235,6 +260,7 @@ function build() {
   const socialLinks = loadSocialLinks();
   const socialIcons = socialIconsHtml(socialLinks);
   const zaloUrl = loadZaloUrl();
+  const texts = loadSiteTexts();
   const zaloIcon = socialIconsHtml(zaloUrl ? [{ platform: 'zalo', url: zaloUrl }] : []);
   let postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
   let bookTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'book.html'), 'utf-8');
@@ -272,7 +298,7 @@ function build() {
   <div class="wrap">
     <div class="section-hd center">
       <div class="eyebrow">Sách</div>
-      <h2>Những quyển sách về giao dịch, đầu tư<br>tôi đã đọc và tâm đắc</h2>
+      <h2>${nl2br(texts.bookHeading)}</h2>
     </div>
     <div class="book-grid3 blog-grid">
 ${books.map((b, i) => bookMiniCardHtml(b, i >= 3, '/sach/')).join('\n')}
@@ -288,6 +314,12 @@ ${books.map((b, i) => bookMiniCardHtml(b, i >= 3, '/sach/')).join('\n')}
     .replace('{{SITE_STYLE}}', siteStyle)
     .replace('{{ZALO_ICON}}', zaloIcon)
     .replace('{{SOCIAL_ICONS_HERO}}', socialIcons)
+    .replace('{{HERO_TITLE}}', nl2br(texts.heroTitle))
+    .replace('{{HERO_DEK}}', texts.heroDek)
+    .replace('{{BLOG_HEADING}}', nl2br(texts.blogHeading))
+    .replace('{{SIGNATURE_NAME}}', texts.signatureName)
+    .replace('{{SIGNATURE_ROLE}}', texts.signatureRole)
+    .replace('{{SIGNATURE_TAGLINE}}', texts.signatureTagline)
     .replaceAll('{{SOCIAL_ICONS}}', socialIcons));
 
   // 3. full archive: nothing hidden

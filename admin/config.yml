@@ -154,3 +154,17 @@ collections:
                   - { label: "TikTok", value: "tiktok" }
                   - { label: "X (Twitter)", value: "x" }
               - { label: "Link", name: "url", widget: "string", required: false }
+          - label: "Văn bản cố định trên trang chủ"
+            name: "homeTextsGroup"
+            widget: "object"
+            required: false
+            collapsed: false
+            hint: "Bỏ trống ô nào thì dùng mặc định gốc. Xuống dòng (Enter) trong ô = xuống dòng khi hiển thị."
+            fields:
+              - { label: "Tiêu đề Hero (dưới banner, đầu trang chủ)", name: "heroTitle", widget: "text", required: false, hint: "Mặc định: Tâm trí bình yên, vui vẻ / là điều quan trọng nhất." }
+              - { label: "Đoạn mô tả dưới tiêu đề Hero", name: "heroDek", widget: "text", required: false }
+              - { label: "Tiêu đề mục Blog", name: "blogHeading", widget: "text", required: false, hint: "Mặc định: Những suy nghĩ, chia sẻ, bài học / từ cuộc sống và giao dịch cổ phiếu" }
+              - { label: "Tiêu đề mục Sách", name: "bookHeading", widget: "text", required: false, hint: "Mặc định: Những quyển sách về giao dịch, đầu tư / tôi đã đọc và tâm đắc" }
+              - { label: "Tên (chữ ký cuối trang)", name: "signatureName", widget: "string", required: false, hint: "Mặc định: Hải Nam" }
+              - { label: "Chức danh (chữ ký cuối trang)", name: "signatureRole", widget: "string", required: false, hint: "Mặc định: Giám đốc Tư vấn đầu tư · SSI" }
+              - { label: "Câu tagline (chữ ký cuối trang)", name: "signatureTagline", widget: "text", required: false, hint: "Mặc định: Kỷ luật trước, lợi nhuận sau. Cảm ơn bạn đã đọc đến đây." }
