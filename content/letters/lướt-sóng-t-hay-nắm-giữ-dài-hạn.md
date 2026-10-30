@@ -3,6 +3,7 @@ title: Lướt sóng T+ hay nắm giữ dài hạn?
 date: 2026-10-30
 dek: Lướt sóng T+ hay nắm giữ dài hạn, cái nào có lợi hơn?
 read: 5 phút đọc
+image: /uploads/doi-dau.jfif
 bg: light
 ---
 Khi tham gia vào các thị trường tài chính, kiểu gì bạn cũng đi lạc vào mê hồn trận suy nghĩ về việc mua bán nhanh hay mua và nắm giữ. Với thị trường chứng khoán thì thường hay gọi là lướt sóng T+ hay nắm giữ dài hạn, cái nào có lợi hơn?
