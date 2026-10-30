@@ -43,6 +43,9 @@ function socialIconsHtml(links) {
   return `<div class="social-icons">
 ${items.map(l => {
     const icon = SOCIAL_ICONS[l.platform];
+    if (l.platform === 'zalo') {
+      return `      <a href="${l.url}" target="_blank" rel="noopener" aria-label="${icon.label}" class="icon-img"><img src="/zalo-icon.png" alt="Zalo"></a>`;
+    }
     return `      <a href="${l.url}" target="_blank" rel="noopener" aria-label="${icon.label}"><svg viewBox="0 0 24 24" fill="currentColor">${icon.svg}</svg></a>`;
   }).join('\n')}
     </div>`;
