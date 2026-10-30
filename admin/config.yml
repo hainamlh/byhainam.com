@@ -82,9 +82,8 @@ collections:
             name: "fontFamily"
             widget: "select"
             required: false
+            hint: "Để trống = dùng Roboto (font mặc định hiện tại của toàn site)."
             options:
-              - { label: "Lora (có chân — mặc định)", value: "'Lora', serif" }
-              - { label: "Inter (không chân)", value: "'Inter', sans-serif" }
-              - { label: "JetBrains Mono (gõ máy)", value: "'JetBrains Mono', monospace" }
-              - { label: "Georgia", value: "Georgia, serif" }
+              - { label: "Roboto (mặc định)", value: "'Roboto', sans-serif" }
+              - { label: "Georgia (có chân)", value: "Georgia, serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
