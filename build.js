@@ -204,9 +204,10 @@ function bookRowHtml(book, hidden, basePath = '/sach/') {
 
 const ARROW_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
 
-// ---- "Sách nên đọc" trên trang chủ: thẻ nhỏ gọn, 3 cột (ảnh bìa + tên/tác giả/mô tả/Đọc ngay) ----
-function bookMiniCardHtml(book, basePath = '/sach/') {
-  return `      <a href="${basePath}${book.slug}/" class="book-mini">
+// ---- "Sách" trên trang chủ: thẻ nhỏ gọn, 3 cột (ảnh bìa + tên/tác giả/mô tả/Đọc ngay) ----
+function bookMiniCardHtml(book, hidden, basePath = '/sach/') {
+  const cls = hidden ? 'book-mini blog-hidden' : 'book-mini';
+  return `      <a href="${basePath}${book.slug}/" class="${cls}">
         ${tileHtml(book, 'book-mini-thumb')}
         <div>
           <h3>${book.title}</h3>
@@ -265,7 +266,7 @@ function build() {
     fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(book, bookTmpl, siteStyle, books, socialLinks, '/sach/', 'Sách khác'));
   });
 
-  // 2. homepage: Blog = first 9 visible, rest hidden; Sách nên đọc = 3 cuốn mới nhất, "Xem tất cả" -> /sach/
+  // 2. homepage: Blog = first 9 visible, rest hidden; Sách = first 3 visible, rest hidden, Load More tại chỗ (giống Blog)
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
   const bookSection = books.length ? `<section class="section book-section">
   <div class="wrap">
@@ -273,11 +274,11 @@ function build() {
       <div class="eyebrow">Sách</div>
       <h2>Những quyển sách về giao dịch, đầu tư<br>tôi đã đọc và tâm đắc</h2>
     </div>
-    <div class="book-grid3">
-${books.slice(0, 3).map(b => bookMiniCardHtml(b, '/sach/')).join('\n')}
+    <div class="book-grid3 blog-grid">
+${books.map((b, i) => bookMiniCardHtml(b, i >= 3, '/sach/')).join('\n')}
     </div>
     <div class="load-more-wrap">
-      <a href="/sach/" class="btn-load">Load More</a>
+      <button class="btn-load" hidden>Load More</button>
     </div>
   </div>
 </section>` : '';
