@@ -93,6 +93,11 @@ collections:
               - { label: "Lora (có chân, mềm mại)", value: "'Lora', serif" }
               - { label: "Georgia (có chân)", value: "Georgia, serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
+          - label: "Link Zalo (mục Cộng đồng ở trang chủ)"
+            name: "zaloUrl"
+            widget: "string"
+            required: false
+            hint: "Link nhóm/room Zalo. Bỏ trống thì icon Zalo không hiện."
           - label: "Icon mạng xã hội (hiện ở trang chủ + chân trang)"
             name: "socialLinks"
             widget: "list"

@@ -34,6 +34,7 @@ const SOCIAL_ICONS = {
   youtube:  { label: 'YouTube', svg: '<path d="M23 12s0-3.5-.4-5.2a3 3 0 0 0-2.1-2.1C18.8 4 12 4 12 4s-6.8 0-8.5.7a3 3 0 0 0-2.1 2.1C1 8.5 1 12 1 12s0 3.5.4 5.2a3 3 0 0 0 2.1 2.1C5.2 20 12 20 12 20s6.8 0 8.5-.7a3 3 0 0 0 2.1-2.1C23 15.5 23 12 23 12zM9.8 15.5v-7l6 3.5-6 3.5z"/>' },
   tiktok:   { label: 'TikTok', svg: '<path d="M16.5 2c.3 2.2 1.7 3.8 4 4.1v3a7 7 0 0 1-4-1.3v6.8a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a3 3 0 1 0 2.1 2.9V2h3z"/>' },
   x:        { label: 'X', svg: '<path d="M3 3l7.4 9.6L3 21h2.6l6-6.7L16.9 21H21l-7.8-10.1L20.6 3h-2.6l-5.5 6.1L8 3H3zm3 1.7h2l9.9 13h-2L6 4.7z"/>' },
+  zalo:     { label: 'Zalo', svg: '<rect x="2" y="2" width="20" height="20" rx="6"/><path fill="#fff" d="M7 8.3h5.6v1.4H8.9l3.8 4.6v1.2H7v-1.4h3.9L7 9.5V8.3zm7 0h1.5v7.2H14V8.3zm3-.3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-.75 1.8h1.5v5.7h-1.5V9.8z"/>' },
 };
 
 function socialIconsHtml(links) {
@@ -133,6 +134,13 @@ function loadSocialLinks() {
   return data.socialLinks || [];
 }
 
+function loadZaloUrl() {
+  if (!fs.existsSync(SETTINGS_FILE)) return '';
+  const raw = fs.readFileSync(SETTINGS_FILE, 'utf-8');
+  const { data } = matter(raw);
+  return data.zaloUrl || '';
+}
+
 function tileHtml(post, tileClass) {
   if (post.image) return `<div class="${tileClass}"><img src="${post.image}" alt="${post.title}"></div>`;
   const preset = PRESETS[post.bg] || PRESETS.light;
@@ -187,6 +195,8 @@ function build() {
   const siteStyle = loadSiteStyleCss();
   const socialLinks = loadSocialLinks();
   const socialIcons = socialIconsHtml(socialLinks);
+  const zaloUrl = loadZaloUrl();
+  const zaloIcon = socialIconsHtml(zaloUrl ? [{ platform: 'zalo', url: zaloUrl }] : []);
   let postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
   let homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
   let archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
@@ -208,7 +218,12 @@ function build() {
 
   // 2. homepage: first 9 visible, rest hidden behind Load More
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
-  fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl.replace('{{BLOG_GRID}}', homeGrid).replace('{{SITE_STYLE}}', siteStyle).replaceAll('{{SOCIAL_ICONS}}', socialIcons));
+  fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl
+    .replace('{{BLOG_GRID}}', homeGrid)
+    .replace('{{SITE_STYLE}}', siteStyle)
+    .replace('{{ZALO_ICON}}', zaloIcon)
+    .replace('{{SOCIAL_ICONS_HERO}}', socialIcons)
+    .replaceAll('{{SOCIAL_ICONS}}', socialIcons));
 
   // 3. full archive: nothing hidden
   const archiveGrid = posts.map(p => cardHtml(p, false)).join('\n');

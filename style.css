@@ -108,6 +108,10 @@ img{max-width:100%;display:block}
 .section-alt .wrap::before{top:0}
 .section-alt .wrap::after{bottom:0}
 .section-alt .section-hd{margin-bottom:10px}
+.follow-split{display:flex;align-items:flex-start;justify-content:center;gap:48px}
+.follow-col{flex:1;max-width:260px;text-align:center}
+.follow-divider{width:1px;align-self:stretch;background:var(--line);min-height:70px}
+@media(max-width:560px){.follow-split{gap:24px}.follow-divider{min-height:50px}}
 
 /* ===== PRODUCTS (2 blocks, side by side) ===== */
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
