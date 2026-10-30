@@ -98,8 +98,11 @@ function loadSiteStyleCss() {
     // white ink — follow the chosen text color instead so hover states never go invisible.
     rules.push(`:root{--green:${data.siteColor};--green-dark:${data.siteColor};--gold:${data.siteColor}}`);
   }
+  // Cỡ chữ chỉ áp cho nội dung bài viết (đổi cỡ chữ toàn site sẽ vỡ layout tiêu đề/nav).
   if (data.fontSize) rules.push(`.post-body{font-size:${data.fontSize}px}`);
-  if (data.fontFamily) rules.push(`.post-body{font-family:${data.fontFamily}}`);
+  // Font chữ áp cho TOÀN site: style.css dùng var(--font-base) ở mọi nơi (nav, tiêu đề,
+  // nút, nội dung bài viết...), nên chỉ cần đổi 1 biến này là đồng bộ toàn trang.
+  if (data.fontFamily) rules.push(`:root{--font-base:${data.fontFamily}}`);
   return rules.join('\n');
 }
 
