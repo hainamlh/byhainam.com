@@ -103,7 +103,10 @@ img{max-width:100%;display:block}
 .section-hd h2{font-family:var(--font-base);font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:0 0 10px}
 .section-hd p{color:var(--ink-60);font-size:15px;line-height:1.7;margin:0}
 .section-alt{background:var(--paper);padding:14px 0;}
-.section-alt .wrap{padding-top:4px;padding-bottom:4px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.section-alt .wrap{padding-top:22px;padding-bottom:14px;position:relative}
+.section-alt .wrap::before,.section-alt .wrap::after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:120px;height:1px;background:var(--line)}
+.section-alt .wrap::before{top:0}
+.section-alt .wrap::after{bottom:0}
 .section-alt .section-hd{margin-bottom:10px}
 
 /* ===== PRODUCTS (2 blocks, side by side) ===== */
