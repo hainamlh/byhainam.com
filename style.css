@@ -239,7 +239,7 @@ img{max-width:100%;display:block}
 .blog-tile img{width:100%;height:100%;object-fit:cover;}
 
 /* ===== ĐỌC SÁCH (hàng ngang: chữ trước - ảnh bìa sau/phải, như "Bài liên quan" nhưng to hơn) ===== */
-.book-wrap{max-width:var(--read);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:48px;padding-bottom:48px}
+.book-wrap{max-width:816px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:48px;padding-bottom:48px}
 .blog-grid.book-list{display:flex;flex-direction:column}
 .book-row{
   display:flex;flex-direction:row-reverse;align-items:center;gap:28px;padding:24px 0;border-top:1px solid var(--line);
