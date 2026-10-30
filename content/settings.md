@@ -2,5 +2,5 @@
 siteBg: "#ffffff"
 siteColor: "#241e1e"
 fontSize: "17"
-fontFamily: "'Raleway', sans-serif"
+fontFamily: "'Lora', serif"
 ---
