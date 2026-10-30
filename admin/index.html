@@ -8,6 +8,37 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.11.0/dist/decap-cms.js"></script>
+  <script>
+    // Decap CMS mặc định bắt bấm "Công bố" rồi mới hiện menu "Công bố ngay".
+    // Script này tự bấm luôn "Công bố ngay" ngay khi menu đó vừa xuất hiện,
+    // nên chỉ cần bấm "Công bố" 1 lần là xuất bản bài luôn, không cần bấm thêm.
+    // Đây là vá ở phía giao diện dựa theo chữ hiển thị của Decap CMS — nếu bản
+    // CMS sau này đổi chữ/giao diện, script sẽ không tự bấm được nữa (không hỏng
+    // gì cả, chỉ quay lại thao tác bấm 2 lần như cũ).
+    (function () {
+      var AUTO_CLICK_TEXT = ['Công bố ngay', 'Publish now'];
+
+      function tryAutoClick(node) {
+        if (!(node instanceof Element)) return;
+        var candidates = [];
+        if (node.matches && node.matches('li,button,[role="menuitem"]')) candidates.push(node);
+        if (node.querySelectorAll) {
+          candidates = candidates.concat(Array.prototype.slice.call(node.querySelectorAll('li,button,[role="menuitem"]')));
+        }
+        candidates.forEach(function (el) {
+          var text = (el.textContent || '').trim();
+          if (AUTO_CLICK_TEXT.indexOf(text) !== -1) el.click();
+        });
+      }
+
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (m) {
+          m.addedNodes.forEach(tryAutoClick);
+        });
+      });
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+    })();
+  </script>
 </body>
 </html>
 
