@@ -311,9 +311,14 @@ img{max-width:100%;display:block}
 .signature-mark{font-family:var(--font-base);font-style:italic;font-size:clamp(30px,4vw,42px);color:var(--ink);margin:0 0 10px}
 .signature-role{font-size:13px;color:var(--ink-60);margin-bottom:24px}
 .signature-tagline{font-size:14.5px;color:var(--ink-60);max-width:420px;margin:0 auto 24px;line-height:1.7}
-.signature-social{display:flex;gap:20px;justify-content:center;margin-bottom:36px}
+.signature-social{display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:36px}
 .signature-social a{color:var(--ink-40)}
 .signature-social a:hover{color:var(--ink)}
+.signature-social .social-icons{gap:20px}
+.signature-social .social-icons a{width:auto;height:auto;color:var(--ink-40)}
+.signature-social .social-icons a:hover{color:var(--ink);background:none}
+.signature-social .social-icons a svg{width:19px;height:19px}
+.signature-social .social-icons a.icon-img img{width:19px;height:19px}
 
 /* ===== FOOTER ===== */
 .footer{padding:0;}
