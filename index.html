@@ -145,6 +145,8 @@
   </div>
 </section>
 
+
+
 <div class="signature">
   <div class="wrap">
     <div class="signature-mark">Hải Nam</div>
@@ -174,15 +176,17 @@
   var l = document.getElementById('navLinks');
   if (t && l) t.addEventListener('click', function(){ l.classList.toggle('open'); });
 
-  var btn = document.getElementById('loadMoreBtn');
-  var hiddenCards = document.querySelectorAll('.blog-hidden');
-  if (btn && hiddenCards.length) {
-    btn.removeAttribute('hidden');
-    btn.addEventListener('click', function(){
-      hiddenCards.forEach(function(el){ el.classList.remove('blog-hidden'); });
-      btn.setAttribute('hidden', 'true');
-    });
-  }
+  document.querySelectorAll('.blog-grid').forEach(function(grid){
+    var hiddenCards = grid.querySelectorAll('.blog-hidden');
+    var btn = grid.parentElement.querySelector('.btn-load');
+    if (btn && hiddenCards.length) {
+      btn.removeAttribute('hidden');
+      btn.addEventListener('click', function(){
+        hiddenCards.forEach(function(el){ el.classList.remove('blog-hidden'); });
+        btn.setAttribute('hidden', 'true');
+      });
+    }
+  });
 </script>
 </body>
 </html>

@@ -14,8 +14,10 @@ const { marked } = require('marked');
 
 const ROOT = __dirname;
 const CONTENT_DIR = path.join(ROOT, 'content', 'letters');
+const BOOKS_CONTENT_DIR = path.join(ROOT, 'content', 'books');
 const TEMPLATES_DIR = path.join(ROOT, 'templates');
 const LETTERS_OUT = path.join(ROOT, 'letters');
+const BOOKS_OUT = path.join(ROOT, 'sach');
 const SETTINGS_FILE = path.join(ROOT, 'content', 'settings.md');
 
 // ---- icon glyphs + tint presets, keyed by frontmatter `bg` field ----
@@ -59,11 +61,12 @@ function dateDisplay(d) {
   return `${dd}.${mm}.${yyyy}`;
 }
 
-function loadPosts() {
-  const files = fs.readdirSync(CONTENT_DIR).filter(f => f.endsWith('.md'));
+function loadCollection(dir) {
+  if (!fs.existsSync(dir)) return [];
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md'));
   const posts = files.map(file => {
     const slug = file.replace(/\.md$/, '');
-    const raw = fs.readFileSync(path.join(CONTENT_DIR, file), 'utf-8');
+    const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
     const { data, content } = matter(raw);
     return {
       slug,
@@ -79,6 +82,9 @@ function loadPosts() {
   posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   return posts;
 }
+
+function loadPosts() { return loadCollection(CONTENT_DIR); }
+function loadBooks() { return loadCollection(BOOKS_CONTENT_DIR); }
 
 // ---- small hex helpers so other theme tokens can follow the admin's 2 base colors ----
 function hexToRgb(hex) {
@@ -150,9 +156,9 @@ function tileHtml(post, tileClass) {
   return `<div class="${tileClass}" style="background:${preset.bg};${preset.border}"><span style="color:${preset.color}">${ICON}</span></div>`;
 }
 
-// ---- "Bài liên quan": 3 most recent other posts, so every post always has related reading ----
-function relatedRowHtml(post) {
-  return `        <a href="/letters/${post.slug}/" class="related-row">
+// ---- "Bài liên quan" / "Sách khác": 3 most recent other items, so there's always more to read ----
+function relatedRowHtml(post, basePath, heading) {
+  return `        <a href="${basePath}${post.slug}/" class="related-row">
           ${tileHtml(post, 'related-thumb')}
           <div>
             <span class="related-date">${dateDisplay(post.date)}</span>
@@ -161,16 +167,16 @@ function relatedRowHtml(post) {
         </a>`;
 }
 
-function relatedSectionHtml(current, allPosts) {
+function relatedSectionHtml(current, allPosts, basePath = '/letters/', heading = 'Bài liên quan') {
   const related = allPosts.filter(p => p.slug !== current.slug).slice(0, 3);
   if (!related.length) return '';
   return `<div class="related-posts">
-    <h2 class="related-hd">Bài liên quan</h2>
-${related.map(relatedRowHtml).join('\n')}
+    <h2 class="related-hd">${heading}</h2>
+${related.map(p => relatedRowHtml(p, basePath)).join('\n')}
   </div>`;
 }
 
-function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks) {
+function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks, basePath = '/letters/', relatedHeading = 'Bài liên quan') {
   const bodyHtml = marked.parse(post.bodyMd);
   return tmpl
     .replaceAll('{{TITLE}}', post.title)
@@ -178,14 +184,14 @@ function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks) {
     .replaceAll('{{DATE_DISPLAY}}', dateDisplay(post.date))
     .replaceAll('{{READ}}', post.read)
     .replace('{{SITE_STYLE}}', siteStyle)
-    .replace('{{RELATED}}', relatedSectionHtml(post, allPosts))
+    .replace('{{RELATED}}', relatedSectionHtml(post, allPosts, basePath, relatedHeading))
     .replaceAll('{{SOCIAL_ICONS}}', socialIconsHtml(socialLinks))
     .replace('{{BODY}}', bodyHtml);
 }
 
-function cardHtml(post, hidden) {
+function cardHtml(post, hidden, basePath = '/letters/') {
   const cls = hidden ? 'blog-card blog-hidden' : 'blog-card';
-  return `      <a href="/letters/${post.slug}/" class="${cls}">
+  return `      <a href="${basePath}${post.slug}/" class="${cls}">
         ${tileHtml(post, 'blog-tile')}
         <h3>${post.title}</h3>
         <p>${post.dek}</p>
@@ -195,12 +201,14 @@ function cardHtml(post, hidden) {
 
 function build() {
   const posts = loadPosts();
+  const books = loadBooks();
   const siteStyle = loadSiteStyleCss();
   const socialLinks = loadSocialLinks();
   const socialIcons = socialIconsHtml(socialLinks);
   const zaloUrl = loadZaloUrl();
   const zaloIcon = socialIconsHtml(zaloUrl ? [{ platform: 'zalo', url: zaloUrl }] : []);
   let postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
+  let bookTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'book.html'), 'utf-8');
   let homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
   let archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
 
@@ -209,6 +217,7 @@ function build() {
   const cssHash = crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT, 'style.css'))).digest('hex').slice(0, 8);
   const cssHref = `/style.css?v=${cssHash}`;
   postTmpl = postTmpl.replace('/style.css', cssHref);
+  bookTmpl = bookTmpl.replace('/style.css', cssHref);
   homeTmpl = homeTmpl.replace('/style.css', cssHref);
   archiveTmpl = archiveTmpl.replace('/style.css', cssHref);
 
@@ -216,13 +225,35 @@ function build() {
   posts.forEach(post => {
     const outDir = path.join(LETTERS_OUT, post.slug);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle, posts, socialLinks));
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle, posts, socialLinks, '/letters/', 'Bài liên quan'));
   });
 
-  // 2. homepage: first 9 visible, rest hidden behind Load More
+  // 1b. individual book pages
+  books.forEach(book => {
+    const outDir = path.join(BOOKS_OUT, book.slug);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(book, bookTmpl, siteStyle, books, socialLinks, '/sach/', 'Sách khác'));
+  });
+
+  // 2. homepage: Blog = first 9 visible, rest hidden; Đọc sách = first 3 visible, rest hidden
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
+  const bookSection = books.length ? `<section class="section">
+  <div class="wrap">
+    <div class="section-hd center">
+      <div class="eyebrow">Đọc sách</div>
+      <h2>Những cuốn sách tôi đọc<br>và ghi chú lại</h2>
+    </div>
+    <div class="blog-grid" id="bookGrid">
+${books.map((b, i) => cardHtml(b, i >= 3, '/sach/')).join('\n')}
+    </div>
+    <div class="load-more-wrap">
+      <button class="btn-load" hidden>Load More</button>
+    </div>
+  </div>
+</section>` : '';
   fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl
     .replace('{{BLOG_GRID}}', homeGrid)
+    .replace('{{BOOK_SECTION}}', bookSection)
     .replace('{{SITE_STYLE}}', siteStyle)
     .replace('{{ZALO_ICON}}', zaloIcon)
     .replace('{{SOCIAL_ICONS_HERO}}', socialIcons)
@@ -233,7 +264,7 @@ function build() {
   fs.mkdirSync(LETTERS_OUT, { recursive: true });
   fs.writeFileSync(path.join(LETTERS_OUT, 'index.html'), archiveTmpl.replace('{{BLOG_GRID_ALL}}', archiveGrid).replace('{{SITE_STYLE}}', siteStyle).replaceAll('{{SOCIAL_ICONS}}', socialIcons));
 
-  console.log(`Built ${posts.length} posts -> homepage, letters archive, ${posts.length} post pages.`);
+  console.log(`Built ${posts.length} posts, ${books.length} books -> homepage, letters archive, ${posts.length} post pages, ${books.length} book pages.`);
 }
 
 build();
