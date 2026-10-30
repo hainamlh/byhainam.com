@@ -102,8 +102,9 @@ img{max-width:100%;display:block}
 .section-hd.center .eyebrow{justify-content:center}
 .section-hd h2{font-family:var(--font-base);font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:0 0 10px}
 .section-hd p{color:var(--ink-60);font-size:15px;line-height:1.7;margin:0}
-.section-alt{background:var(--paper);}
+.section-alt{background:var(--paper);padding:14px 0;}
 .section-alt .wrap{padding-top:4px;padding-bottom:4px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.section-alt .section-hd{margin-bottom:10px}
 
 /* ===== PRODUCTS (2 blocks, side by side) ===== */
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -270,7 +271,7 @@ img{max-width:100%;display:block}
 .footer-row .social-icons{justify-content:flex-start}
 
 /* Mục "Theo dõi" trên trang chủ: icon to hơn mặc định (36px -> 90px) */
-.social-icons-hero{padding:4px 0}
+.social-icons-hero{padding:0}
 .social-icons-hero .social-icons{gap:16px}
 .social-icons-hero .social-icons a{width:90px;height:90px}
 .social-icons-hero .social-icons a svg{width:45px;height:45px}
