@@ -270,7 +270,10 @@ function build() {
   const bookSection = books.length ? `<section class="section book-section">
   <div class="wrap">
     <div class="book-hd">
-      <h2><span class="book-hd-dash"></span> Sách nên đọc</h2>
+      <div>
+        <h2><span class="book-hd-dash"></span> Sách</h2>
+        <p class="book-hd-sub">Những quyển sách về giao dịch, đầu tư tôi đã đọc và tâm đắc</p>
+      </div>
       <a href="/sach/" class="book-viewall">Xem tất cả ${ARROW_SVG}</a>
     </div>
     <div class="book-grid3">
