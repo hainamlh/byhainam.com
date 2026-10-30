@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 
@@ -153,9 +154,17 @@ function cardHtml(post, hidden) {
 function build() {
   const posts = loadPosts();
   const siteStyle = loadSiteStyleCss();
-  const postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
-  const homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
-  const archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
+  let postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
+  let homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
+  let archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
+
+  // Cache-bust style.css so a published CSS change shows up immediately instead of
+  // being served stale from the browser/host cache (the file name never changed before).
+  const cssHash = crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT, 'style.css'))).digest('hex').slice(0, 8);
+  const cssHref = `/style.css?v=${cssHash}`;
+  postTmpl = postTmpl.replace('/style.css', cssHref);
+  homeTmpl = homeTmpl.replace('/style.css', cssHref);
+  archiveTmpl = archiveTmpl.replace('/style.css', cssHref);
 
   // 1. individual post pages
   posts.forEach(post => {
