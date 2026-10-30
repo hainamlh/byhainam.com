@@ -35,3 +35,5 @@ Khi cổ phiếu đi đúng hướng, đừng vội vàng chốt lời chỉ vì
 > Thông điệp cốt lõi: Thành công không đến từ việc mua thật nhiều cổ phiếu, mà đến từ khả năng nhận diện những cổ phiếu tốt nhất, mua đúng thời điểm, kiểm soát rủi ro và kiên nhẫn nắm giữ những cơ hội chiến thắng lớn.
 
 Một trader xuất sắc không cần thắng mọi giao dịch. Họ cần giới hạn những lần sai và tận dụng tối đa những lần đúng.
+
+![](/uploads/sach.jpg)
