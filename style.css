@@ -83,7 +83,7 @@ img{max-width:100%;display:block}
 }
 
 /* ===== HERO (centered, statement-first) ===== */
-.hero{padding:64px 0 72px;text-align:center}
+.hero{padding:64px 0 32px;text-align:center}
 .hero .eyebrow{justify-content:center}
 .hero h1{
   font-family:var(--font-base);font-weight:600;font-size:clamp(30px,5vw,54px);
@@ -112,7 +112,12 @@ img{max-width:100%;display:block}
 .follow-col{display:flex;align-items:center;gap:12px}
 .follow-col .eyebrow{margin-bottom:0;white-space:nowrap}
 .follow-divider{width:1px;align-self:stretch;background:var(--line)}
-@media(max-width:560px){.follow-split{gap:16px}.follow-col{gap:8px}}
+@media(max-width:560px){
+  .follow-split{flex-direction:column;align-items:stretch;gap:14px}
+  .follow-col{gap:8px}
+  .follow-col .eyebrow{min-width:94px;flex:none}
+  .follow-divider{display:none}
+}
 
 /* ===== PRODUCTS (2 blocks, side by side) ===== */
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -239,6 +244,7 @@ img{max-width:100%;display:block}
 .blog-tile img{width:100%;height:100%;object-fit:cover;}
 
 /* ===== ĐỌC SÁCH (hàng ngang: chữ trước - ảnh bìa sau/phải, như "Bài liên quan" nhưng to hơn) ===== */
+.book-section{padding-bottom:16px}
 .book-wrap{max-width:750px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:48px;padding-bottom:48px}
 .blog-grid.book-list{display:flex;flex-direction:column}
 .book-row{
