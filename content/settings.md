@@ -7,11 +7,11 @@ socialLinks:
   - platform: substack
     url: ""
   - platform: facebook
-    url: ""
+    url: https://www.facebook.com/hainamcap/
   - platform: youtube
     url: ""
   - platform: tiktok
-    url: ""
+    url: https://www.tiktok.com/@nguyenhainamck
   - platform: x
     url: ""
 ---
