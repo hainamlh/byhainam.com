@@ -268,3 +268,9 @@ img{max-width:100%;display:block}
 .social-icons a:hover{color:var(--ink);background:var(--card)}
 .social-icons a svg{width:18px;height:18px}
 .footer-row .social-icons{justify-content:flex-start}
+
+/* Mục "Theo dõi" trên trang chủ: icon to gấp 10 lần kích thước mặc định (36px -> 360px) */
+.social-icons-hero{padding:40px 0}
+.social-icons-hero .social-icons{gap:40px}
+.social-icons-hero .social-icons a{width:360px;height:360px}
+.social-icons-hero .social-icons a svg{width:180px;height:180px}
