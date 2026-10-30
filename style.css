@@ -315,11 +315,6 @@ img{max-width:100%;display:block}
 .signature-social{display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:36px}
 .signature-social a{color:var(--ink-40)}
 .signature-social a:hover{color:var(--ink)}
-.signature-social .social-icons{gap:20px}
-.signature-social .social-icons a{width:auto;height:auto;color:var(--ink-40)}
-.signature-social .social-icons a:hover{color:var(--ink);background:none}
-.signature-social .social-icons a svg{width:19px;height:19px}
-.signature-social .social-icons a.icon-img img{width:19px;height:19px}
 
 /* ===== FOOTER ===== */
 .footer{padding:0;}
