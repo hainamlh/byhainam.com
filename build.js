@@ -15,6 +15,7 @@ const ROOT = __dirname;
 const CONTENT_DIR = path.join(ROOT, 'content', 'letters');
 const TEMPLATES_DIR = path.join(ROOT, 'templates');
 const LETTERS_OUT = path.join(ROOT, 'letters');
+const SETTINGS_FILE = path.join(ROOT, 'content', 'settings.md');
 
 // ---- icon glyphs + tint presets, keyed by frontmatter `bg` field ----
 const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8A3.5 3.5 0 0 0 8 18a3 3 0 0 0 4-2V6a2 2 0 0 0-3-2z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8A3.5 3.5 0 0 1 16 18a3 3 0 0 1-4-2"/></svg>';
@@ -47,7 +48,6 @@ function loadPosts() {
       read: data.read || '3 phút đọc',
       bg: data.bg || 'light',
       image: data.image || '',
-      display: data.display || {},
       bodyMd: content.trim(),
     };
   });
@@ -55,27 +55,28 @@ function loadPosts() {
   return posts;
 }
 
-// ---- admin-chosen display overrides (background/text color, font size, font family) ----
-function postStyleCss(display) {
-  const d = display || {};
+// ---- site-wide display overrides, set once in admin ("Cài đặt giao diện") ----
+// Applies to every page: homepage, letters archive, and all post pages.
+function loadSiteStyleCss() {
+  if (!fs.existsSync(SETTINGS_FILE)) return '';
+  const raw = fs.readFileSync(SETTINGS_FILE, 'utf-8');
+  const { data } = matter(raw);
   const rules = [];
-  if (d.postBg) rules.push(`body{background:${d.postBg}}`);
-  if (d.postColor) {
-    rules.push(`.post-body,.post-body p,.post-body li,.post-body strong{color:${d.postColor}}`);
-  }
-  if (d.fontSize) rules.push(`.post-body{font-size:${d.fontSize}px}`);
-  if (d.fontFamily) rules.push(`.post-body{font-family:${d.fontFamily}}`);
+  if (data.siteBg) rules.push(`:root{--paper:${data.siteBg}}`);
+  if (data.siteColor) rules.push(`:root{--ink:${data.siteColor}}`);
+  if (data.fontSize) rules.push(`.post-body{font-size:${data.fontSize}px}`);
+  if (data.fontFamily) rules.push(`.post-body{font-family:${data.fontFamily}}`);
   return rules.join('\n');
 }
 
-function renderPostPage(post, tmpl) {
+function renderPostPage(post, tmpl, siteStyle) {
   const bodyHtml = marked.parse(post.bodyMd);
   return tmpl
     .replaceAll('{{TITLE}}', post.title)
     .replaceAll('{{DEK}}', post.dek)
     .replaceAll('{{DATE_DISPLAY}}', dateDisplay(post.date))
     .replaceAll('{{READ}}', post.read)
-    .replace('{{POST_STYLE}}', postStyleCss(post.display))
+    .replace('{{SITE_STYLE}}', siteStyle)
     .replace('{{BODY}}', bodyHtml);
 }
 
@@ -97,6 +98,7 @@ function cardHtml(post, hidden) {
 
 function build() {
   const posts = loadPosts();
+  const siteStyle = loadSiteStyleCss();
   const postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
   const homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
   const archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
@@ -105,17 +107,17 @@ function build() {
   posts.forEach(post => {
     const outDir = path.join(LETTERS_OUT, post.slug);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl));
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle));
   });
 
   // 2. homepage: first 9 visible, rest hidden behind Load More
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
-  fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl.replace('{{BLOG_GRID}}', homeGrid));
+  fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl.replace('{{BLOG_GRID}}', homeGrid).replace('{{SITE_STYLE}}', siteStyle));
 
   // 3. full archive: nothing hidden
   const archiveGrid = posts.map(p => cardHtml(p, false)).join('\n');
   fs.mkdirSync(LETTERS_OUT, { recursive: true });
-  fs.writeFileSync(path.join(LETTERS_OUT, 'index.html'), archiveTmpl.replace('{{BLOG_GRID_ALL}}', archiveGrid));
+  fs.writeFileSync(path.join(LETTERS_OUT, 'index.html'), archiveTmpl.replace('{{BLOG_GRID_ALL}}', archiveGrid).replace('{{SITE_STYLE}}', siteStyle));
 
   console.log(`Built ${posts.length} posts -> homepage, letters archive, ${posts.length} post pages.`);
 }

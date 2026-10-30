@@ -51,16 +51,25 @@ collections:
           - { label: "Sáng (trắng)", value: "light" }
           - { label: "Xanh lá nhạt", value: "light-green" }
           - { label: "Đỏ nhạt", value: "light-red" }
-      - label: "Tuỳ chỉnh hiển thị bài viết"
-        name: "display"
-        widget: "object"
-        collapsed: true
-        required: false
-        hint: "Để trống mục nào thì bài viết dùng mặc định của site."
+      - label: "Nội dung bài viết"
+        name: "body"
+        widget: "markdown"
+        buttons: ["bold", "italic", "link", "heading-one", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image"]
+
+  - name: "settings"
+    label: "Cài đặt giao diện"
+    editor:
+      preview: false
+    files:
+      - label: "Giao diện toàn site"
+        name: "theme"
+        file: "content/settings.md"
+        description: "Màu nền, màu chữ, cỡ chữ, font chữ áp dụng cho TOÀN BỘ website (trang chủ, danh sách bài viết, trang bài viết). Để trống mục nào thì dùng mặc định gốc của site."
         fields:
-          - { label: "Màu nền trang bài viết", name: "postBg", widget: "color", required: false, allowInput: true, enableAlpha: false, hint: "Ví dụ #000000 hoặc #FFFFFF" }
-          - { label: "Màu chữ nội dung", name: "postColor", widget: "color", required: false, allowInput: true, enableAlpha: false }
-          - label: "Cỡ chữ nội dung"
+          - { label: "Màu nền toàn site", name: "siteBg", widget: "color", required: false, allowInput: true, enableAlpha: false, hint: "Mặc định gốc: #000000" }
+          - { label: "Màu chữ toàn site", name: "siteColor", widget: "color", required: false, allowInput: true, enableAlpha: false, hint: "Mặc định gốc: #FFFFFF" }
+          - label: "Cỡ chữ nội dung bài viết"
             name: "fontSize"
             widget: "select"
             required: false
@@ -69,7 +78,7 @@ collections:
               - { label: "Vừa (17px — mặc định)", value: "17" }
               - { label: "Lớn (19px)", value: "19" }
               - { label: "Rất lớn (21px)", value: "21" }
-          - label: "Font chữ nội dung"
+          - label: "Font chữ nội dung bài viết"
             name: "fontFamily"
             widget: "select"
             required: false
@@ -79,8 +88,3 @@ collections:
               - { label: "JetBrains Mono (gõ máy)", value: "'JetBrains Mono', monospace" }
               - { label: "Georgia", value: "Georgia, serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
-      - label: "Nội dung bài viết"
-        name: "body"
-        widget: "markdown"
-        buttons: ["bold", "italic", "link", "heading-one", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"]
-        editor_components: ["image"]
