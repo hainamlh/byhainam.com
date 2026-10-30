@@ -9,7 +9,7 @@ socialLinks:
   - platform: facebook
     url: https://www.facebook.com/hainamcap/
   - platform: youtube
-    url: ""
+    url: https://www.youtube.com/@Nguyenhainamck
   - platform: tiktok
     url: https://www.tiktok.com/@nguyenhainamck
   - platform: x
