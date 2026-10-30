@@ -28,3 +28,5 @@ Trader thành công hiểu rõ lợi thế của hệ thống, tuân thủ nguy�
 Thông điệp cốt lõi: Bạn không cần dự đoán đúng thị trường để kiếm tiền. Bạn cần một hệ thống có lợi thế, tư duy xác suất, khả năng chấp nhận rủi ro và kỷ luật thực hiện nó một cách nhất quán.
 
 Trading in the Zone dạy chúng ta chuyển từ tư duy muốn kiểm soát kết quả sang tư duy kiểm soát hành vi. Đó chính là nền tảng để tồn tại và phát triển bền vững trên thị trường tài chính.
+
+![](/uploads/sach0.jpg)
