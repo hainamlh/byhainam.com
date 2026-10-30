@@ -3,7 +3,7 @@ siteBg: "#ffffff"
 siteColor: "#241e1e"
 fontSize: "17"
 fontFamily: "'Lora', serif"
-zaloUrl: ""
+zaloUrl: https://zalo.me/g/bsevtt375
 socialLinks:
   - platform: substack
     url: ""
