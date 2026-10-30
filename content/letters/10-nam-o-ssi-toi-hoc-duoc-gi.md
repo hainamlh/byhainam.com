@@ -1,9 +1,10 @@
 ---
 title: 10 năm ở SSI, tôi học được gì
 date: 2026-05-28
-dek: Không phải một chiến lược thần kỳ. Mà là một tập hợp những sai lầm tôi chỉ
-  được phép mắc một lần.
-read: 5 phút đọc
+dek: Thị trường không phải là nơi bạn chứng minh mình thông minh, không phải là
+  nơi để khoe lãi, đó là nơi các hệ thống giao dịch vận hành và tìm ra lợi thế
+  dài hạn của nó.
+read: 2 phút đọc
 image: /uploads/rsline.png
 bg: light
 ---
