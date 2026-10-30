@@ -85,5 +85,11 @@ collections:
             hint: "Để trống = dùng Roboto (font mặc định hiện tại của toàn site)."
             options:
               - { label: "Roboto (mặc định)", value: "'Roboto', sans-serif" }
+              - { label: "Quicksand (tròn, hiện đại)", value: "'Quicksand', sans-serif" }
+              - { label: "Merriweather (có chân, báo chí)", value: "'Merriweather', serif" }
+              - { label: "Raleway (thanh mảnh)", value: "'Raleway', sans-serif" }
+              - { label: "Poppins (hình học, đậm)", value: "'Poppins', sans-serif" }
+              - { label: "Lato", value: "'Lato', sans-serif" }
+              - { label: "Lora (có chân, mềm mại)", value: "'Lora', serif" }
               - { label: "Georgia (có chân)", value: "Georgia, serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
