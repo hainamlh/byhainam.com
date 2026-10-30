@@ -109,8 +109,8 @@ img{max-width:100%;display:block}
 .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 @media(max-width:760px){.product-grid{grid-template-columns:1fr}}
 .product-card{
-  border-radius:var(--radius-lg);padding:44px 36px;display:flex;flex-direction:column;
-  min-height:340px;transition:transform .18s ease;
+  border-radius:var(--radius-lg);padding:33px 27px;display:flex;flex-direction:column;
+  min-height:255px;transition:transform .18s ease;
 }
 .product-card:hover{transform:translateY(-4px)}
 .product-stock{background:linear-gradient(155deg,#1a1917 0%,#2d2b28 100%);color:#fff}
