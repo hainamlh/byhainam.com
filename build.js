@@ -250,8 +250,8 @@ function build() {
 
   // 2. homepage: Blog = first 9 visible, rest hidden; Đọc sách = first 3 visible, rest hidden
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
-  const bookSection = books.length ? `<section class="section">
-  <div class="wrap">
+  const bookSection = books.length ? `<section class="section book-section">
+  <div class="wrap book-wrap">
     <div class="section-hd center">
       <div class="eyebrow">Đọc sách</div>
       <h2>Những cuốn sách tôi đọc<br>và ghi chú lại</h2>
