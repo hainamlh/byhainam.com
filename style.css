@@ -102,8 +102,8 @@ img{max-width:100%;display:block}
 .section-hd.center .eyebrow{justify-content:center}
 .section-hd h2{font-family:var(--font-base);font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:-.01em;margin:0 0 10px}
 .section-hd p{color:var(--ink-60);font-size:15px;line-height:1.7;margin:0}
-.section-alt{background:var(--paper);padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.section-alt .wrap{padding-top:22px;padding-bottom:14px}
+.section-alt{background:var(--paper);padding:14px 0;}
+.section-alt .wrap{padding-top:22px;padding-bottom:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .section-alt .section-hd{margin-bottom:10px}
 .follow-split{display:flex;align-items:center;justify-content:center;gap:28px;width:100%;flex-wrap:wrap}
 .follow-col{display:flex;align-items:center;gap:12px}
@@ -241,8 +241,9 @@ img{max-width:100%;display:block}
 .blog-tile img{width:100%;height:100%;object-fit:cover;}
 
 /* ===== ĐỌC SÁCH (hàng ngang: chữ trước - ảnh bìa sau/phải, như "Bài liên quan" nhưng to hơn) ===== */
-.book-section{padding-bottom:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.book-wrap{max-width:750px;padding-top:48px;padding-bottom:48px}
+.book-section{padding-bottom:16px}
+.book-section > .wrap{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book-wrap{max-width:750px;margin:0 auto;padding-top:48px;padding-bottom:48px}
 .blog-grid.book-list{display:flex;flex-direction:column}
 .book-row{
   display:flex;flex-direction:row-reverse;align-items:center;gap:28px;padding:24px 0;border-top:1px solid var(--line);
@@ -278,8 +279,8 @@ img{max-width:100%;display:block}
 .btn-load[hidden]{display:none}
 
 /* ===== SIGNATURE (closing sign-off) ===== */
-.signature{padding:0 0 48px;text-align:center;}
-.signature .wrap{padding-top:72px;}
+.signature{padding:0 0 32px;text-align:center;}
+.signature .wrap{padding-top:28px;}
 .signature-mark{font-family:var(--font-base);font-style:italic;font-size:clamp(30px,4vw,42px);color:var(--ink);margin:0 0 10px}
 .signature-role{font-size:13px;color:var(--ink-60);margin-bottom:24px}
 .signature-tagline{font-size:14.5px;color:var(--ink-60);max-width:420px;margin:0 auto 24px;line-height:1.7}

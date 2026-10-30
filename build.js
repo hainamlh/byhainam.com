@@ -251,16 +251,18 @@ function build() {
   // 2. homepage: Blog = first 9 visible, rest hidden; Đọc sách = first 3 visible, rest hidden
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
   const bookSection = books.length ? `<section class="section book-section">
-  <div class="wrap book-wrap">
-    <div class="section-hd center">
-      <div class="eyebrow">Đọc sách</div>
-      <h2>Chia sẻ một số quyển sách<br>tôi tâm đắc</h2>
-    </div>
-    <div class="blog-grid book-list" id="bookGrid">
+  <div class="wrap">
+    <div class="book-wrap">
+      <div class="section-hd center">
+        <div class="eyebrow">Đọc sách</div>
+        <h2>Chia sẻ một số quyển sách<br>tôi tâm đắc</h2>
+      </div>
+      <div class="blog-grid book-list" id="bookGrid">
 ${books.map((b, i) => bookRowHtml(b, i >= 3, '/sach/')).join('\n')}
-    </div>
-    <div class="load-more-wrap">
-      <button class="btn-load" hidden>Load More</button>
+      </div>
+      <div class="load-more-wrap">
+        <button class="btn-load" hidden>Load More</button>
+      </div>
     </div>
   </div>
 </section>` : '';
