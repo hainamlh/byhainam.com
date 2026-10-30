@@ -93,3 +93,20 @@ collections:
               - { label: "Lora (có chân, mềm mại)", value: "'Lora', serif" }
               - { label: "Georgia (có chân)", value: "Georgia, serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
+          - label: "Icon mạng xã hội (hiện ở trang chủ + chân trang)"
+            name: "socialLinks"
+            widget: "list"
+            required: false
+            summary: "{{fields.platform}}"
+            hint: "Thêm/bớt icon tại đây, kéo thả để đổi thứ tự. Bỏ trống Link thì icon đó không hiện."
+            fields:
+              - label: "Nền tảng"
+                name: "platform"
+                widget: "select"
+                options:
+                  - { label: "Substack", value: "substack" }
+                  - { label: "Facebook", value: "facebook" }
+                  - { label: "YouTube", value: "youtube" }
+                  - { label: "TikTok", value: "tiktok" }
+                  - { label: "X (Twitter)", value: "x" }
+              - { label: "Link", name: "url", widget: "string", required: false }

@@ -256,6 +256,15 @@ img{max-width:100%;display:block}
 .footer{padding:0;}
 .footer .wrap{border-top:1px solid var(--line);padding-top:24px;padding-bottom:24px;}
 .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-links{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--font-base);font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-60)}
-.footer-links a:hover{color:var(--ink)}
 .footer-copy{font-size:12.5px;color:var(--ink-40)}
+
+/* ===== SOCIAL ICONS (footer + trang chủ, cấu hình trong admin) ===== */
+.social-icons{display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap}
+.social-icons a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:100px;color:var(--ink-60);
+  transition:color .15s,background .15s;
+}
+.social-icons a:hover{color:var(--ink);background:var(--card)}
+.social-icons a svg{width:18px;height:18px}
+.footer-row .social-icons{justify-content:flex-start}

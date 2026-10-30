@@ -27,6 +27,26 @@ const PRESETS = {
   'light-red':   { bg: '#FAECE7', color: '#A32D2D', border: '' },
 };
 
+// ---- social icons: admin picks platform + link in "Cài đặt giao diện" (content/settings.md) ----
+const SOCIAL_ICONS = {
+  substack: { label: 'Substack', svg: '<path d="M3 3h18v3.5H3V3zm0 5.5h18V12H3V8.5zM3 14h18v7l-9-4-9 4v-7z"/>' },
+  facebook: { label: 'Facebook', svg: '<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/>' },
+  youtube:  { label: 'YouTube', svg: '<path d="M23 12s0-3.5-.4-5.2a3 3 0 0 0-2.1-2.1C18.8 4 12 4 12 4s-6.8 0-8.5.7a3 3 0 0 0-2.1 2.1C1 8.5 1 12 1 12s0 3.5.4 5.2a3 3 0 0 0 2.1 2.1C5.2 20 12 20 12 20s6.8 0 8.5-.7a3 3 0 0 0 2.1-2.1C23 15.5 23 12 23 12zM9.8 15.5v-7l6 3.5-6 3.5z"/>' },
+  tiktok:   { label: 'TikTok', svg: '<path d="M16.5 2c.3 2.2 1.7 3.8 4 4.1v3a7 7 0 0 1-4-1.3v6.8a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a3 3 0 1 0 2.1 2.9V2h3z"/>' },
+  x:        { label: 'X', svg: '<path d="M3 3l7.4 9.6L3 21h2.6l6-6.7L16.9 21H21l-7.8-10.1L20.6 3h-2.6l-5.5 6.1L8 3H3zm3 1.7h2l9.9 13h-2L6 4.7z"/>' },
+};
+
+function socialIconsHtml(links) {
+  const items = (links || []).filter(l => l && SOCIAL_ICONS[l.platform] && l.url);
+  if (!items.length) return '';
+  return `<div class="social-icons">
+${items.map(l => {
+    const icon = SOCIAL_ICONS[l.platform];
+    return `      <a href="${l.url}" target="_blank" rel="noopener" aria-label="${icon.label}"><svg viewBox="0 0 24 24" fill="currentColor">${icon.svg}</svg></a>`;
+  }).join('\n')}
+    </div>`;
+}
+
 function dateDisplay(d) {
   const dt = new Date(d);
   const dd = String(dt.getUTCDate()).padStart(2, '0');
@@ -106,6 +126,13 @@ function loadSiteStyleCss() {
   return rules.join('\n');
 }
 
+function loadSocialLinks() {
+  if (!fs.existsSync(SETTINGS_FILE)) return [];
+  const raw = fs.readFileSync(SETTINGS_FILE, 'utf-8');
+  const { data } = matter(raw);
+  return data.socialLinks || [];
+}
+
 function tileHtml(post, tileClass) {
   if (post.image) return `<div class="${tileClass}"><img src="${post.image}" alt="${post.title}"></div>`;
   const preset = PRESETS[post.bg] || PRESETS.light;
@@ -132,7 +159,7 @@ ${related.map(relatedRowHtml).join('\n')}
   </div>`;
 }
 
-function renderPostPage(post, tmpl, siteStyle, allPosts) {
+function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks) {
   const bodyHtml = marked.parse(post.bodyMd);
   return tmpl
     .replaceAll('{{TITLE}}', post.title)
@@ -141,6 +168,7 @@ function renderPostPage(post, tmpl, siteStyle, allPosts) {
     .replaceAll('{{READ}}', post.read)
     .replace('{{SITE_STYLE}}', siteStyle)
     .replace('{{RELATED}}', relatedSectionHtml(post, allPosts))
+    .replaceAll('{{SOCIAL_ICONS}}', socialIconsHtml(socialLinks))
     .replace('{{BODY}}', bodyHtml);
 }
 
@@ -157,6 +185,8 @@ function cardHtml(post, hidden) {
 function build() {
   const posts = loadPosts();
   const siteStyle = loadSiteStyleCss();
+  const socialLinks = loadSocialLinks();
+  const socialIcons = socialIconsHtml(socialLinks);
   let postTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'post.html'), 'utf-8');
   let homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
   let archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
@@ -173,17 +203,17 @@ function build() {
   posts.forEach(post => {
     const outDir = path.join(LETTERS_OUT, post.slug);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle, posts));
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle, posts, socialLinks));
   });
 
   // 2. homepage: first 9 visible, rest hidden behind Load More
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
-  fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl.replace('{{BLOG_GRID}}', homeGrid).replace('{{SITE_STYLE}}', siteStyle));
+  fs.writeFileSync(path.join(ROOT, 'index.html'), homeTmpl.replace('{{BLOG_GRID}}', homeGrid).replace('{{SITE_STYLE}}', siteStyle).replaceAll('{{SOCIAL_ICONS}}', socialIcons));
 
   // 3. full archive: nothing hidden
   const archiveGrid = posts.map(p => cardHtml(p, false)).join('\n');
   fs.mkdirSync(LETTERS_OUT, { recursive: true });
-  fs.writeFileSync(path.join(LETTERS_OUT, 'index.html'), archiveTmpl.replace('{{BLOG_GRID_ALL}}', archiveGrid).replace('{{SITE_STYLE}}', siteStyle));
+  fs.writeFileSync(path.join(LETTERS_OUT, 'index.html'), archiveTmpl.replace('{{BLOG_GRID_ALL}}', archiveGrid).replace('{{SITE_STYLE}}', siteStyle).replaceAll('{{SOCIAL_ICONS}}', socialIcons));
 
   console.log(`Built ${posts.length} posts -> homepage, letters archive, ${posts.length} post pages.`);
 }
