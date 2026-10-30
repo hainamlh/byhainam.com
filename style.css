@@ -46,7 +46,8 @@ img{max-width:100%;display:block}
   display:flex;align-items:center;justify-content:space-between;
   padding:22px 0;position:relative;z-index:10;
 }
-.nav-brand{font-weight:800;font-size:19px;letter-spacing:-.02em}
+.site-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-brand{font-weight:800;font-size:21px;letter-spacing:-.02em}
 .nav-brand span{color:var(--gold);-webkit-text-stroke:.4px var(--ink)}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{
