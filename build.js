@@ -47,11 +47,25 @@ function loadPosts() {
       read: data.read || '3 phút đọc',
       bg: data.bg || 'light',
       image: data.image || '',
+      display: data.display || {},
       bodyMd: content.trim(),
     };
   });
   posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   return posts;
+}
+
+// ---- admin-chosen display overrides (background/text color, font size, font family) ----
+function postStyleCss(display) {
+  const d = display || {};
+  const rules = [];
+  if (d.postBg) rules.push(`body{background:${d.postBg}}`);
+  if (d.postColor) {
+    rules.push(`.post-body,.post-body p,.post-body li,.post-body strong{color:${d.postColor}}`);
+  }
+  if (d.fontSize) rules.push(`.post-body{font-size:${d.fontSize}px}`);
+  if (d.fontFamily) rules.push(`.post-body{font-family:${d.fontFamily}}`);
+  return rules.join('\n');
 }
 
 function renderPostPage(post, tmpl) {
@@ -61,6 +75,7 @@ function renderPostPage(post, tmpl) {
     .replaceAll('{{DEK}}', post.dek)
     .replaceAll('{{DATE_DISPLAY}}', dateDisplay(post.date))
     .replaceAll('{{READ}}', post.read)
+    .replace('{{POST_STYLE}}', postStyleCss(post.display))
     .replace('{{BODY}}', bodyHtml);
 }
 

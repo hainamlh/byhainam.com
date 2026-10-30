@@ -51,6 +51,34 @@ collections:
           - { label: "Sáng (trắng)", value: "light" }
           - { label: "Xanh lá nhạt", value: "light-green" }
           - { label: "Đỏ nhạt", value: "light-red" }
+      - label: "Tuỳ chỉnh hiển thị bài viết"
+        name: "display"
+        widget: "object"
+        collapsed: true
+        required: false
+        hint: "Để trống mục nào thì bài viết dùng mặc định của site."
+        fields:
+          - { label: "Màu nền trang bài viết", name: "postBg", widget: "color", required: false, allowInput: true, enableAlpha: false, hint: "Ví dụ #000000 hoặc #FFFFFF" }
+          - { label: "Màu chữ nội dung", name: "postColor", widget: "color", required: false, allowInput: true, enableAlpha: false }
+          - label: "Cỡ chữ nội dung"
+            name: "fontSize"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Nhỏ (15px)", value: "15" }
+              - { label: "Vừa (17px — mặc định)", value: "17" }
+              - { label: "Lớn (19px)", value: "19" }
+              - { label: "Rất lớn (21px)", value: "21" }
+          - label: "Font chữ nội dung"
+            name: "fontFamily"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Lora (có chân — mặc định)", value: "'Lora', serif" }
+              - { label: "Inter (không chân)", value: "'Inter', sans-serif" }
+              - { label: "JetBrains Mono (gõ máy)", value: "'JetBrains Mono', monospace" }
+              - { label: "Georgia", value: "Georgia, serif" }
+              - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
       - label: "Nội dung bài viết"
         name: "body"
         widget: "markdown"
