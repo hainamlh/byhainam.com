@@ -102,27 +102,53 @@ function loadSiteStyleCss() {
   return rules.join('\n');
 }
 
-function renderPostPage(post, tmpl, siteStyle) {
+function tileHtml(post, tileClass) {
+  if (post.image) return `<div class="${tileClass}"><img src="${post.image}" alt="${post.title}"></div>`;
+  const preset = PRESETS[post.bg] || PRESETS.light;
+  return `<div class="${tileClass}" style="background:${preset.bg};${preset.border}"><span style="color:${preset.color}">${ICON}</span></div>`;
+}
+
+// ---- "Bài liên quan": 3 most recent other posts, so every post always has related reading ----
+function relatedRowHtml(post) {
+  return `        <a href="/letters/${post.slug}/" class="related-row">
+          ${tileHtml(post, 'related-thumb')}
+          <div>
+            <span class="related-date">${dateDisplay(post.date)}</span>
+            <h3>${post.title}</h3>
+          </div>
+        </a>`;
+}
+
+function relatedSectionHtml(current, allPosts) {
+  const related = allPosts.filter(p => p.slug !== current.slug).slice(0, 3);
+  if (!related.length) return '';
+  return `<div class="related-posts">
+    <h2 class="related-hd">Bài liên quan</h2>
+${related.map(relatedRowHtml).join('\n')}
+  </div>`;
+}
+
+function renderPostPage(post, tmpl, siteStyle, allPosts) {
   const bodyHtml = marked.parse(post.bodyMd);
   return tmpl
     .replaceAll('{{TITLE}}', post.title)
     .replaceAll('{{DEK}}', post.dek)
     .replaceAll('{{DATE_DISPLAY}}', dateDisplay(post.date))
     .replaceAll('{{READ}}', post.read)
+    .replaceAll('{{SLUG}}', post.slug)
+    // Views/likes are wired to a live counter separately — placeholders for now so
+    // the UI ships without a dangling {{...}} on the page.
+    .replaceAll('{{VIEWS}}', '0')
+    .replaceAll('{{LIKES}}', '0')
     .replace('{{SITE_STYLE}}', siteStyle)
+    .replace('{{RELATED}}', relatedSectionHtml(post, allPosts))
     .replace('{{BODY}}', bodyHtml);
 }
 
 function cardHtml(post, hidden) {
   const cls = hidden ? 'blog-card blog-hidden' : 'blog-card';
-  const tile = post.image
-    ? `<div class="blog-tile"><img src="${post.image}" alt="${post.title}"></div>`
-    : (() => {
-        const preset = PRESETS[post.bg] || PRESETS.light;
-        return `<div class="blog-tile" style="background:${preset.bg};${preset.border}"><span style="color:${preset.color}">${ICON}</span></div>`;
-      })();
   return `      <a href="/letters/${post.slug}/" class="${cls}">
-        ${tile}
+        ${tileHtml(post, 'blog-tile')}
         <h3>${post.title}</h3>
         <p>${post.dek}</p>
         <div class="blog-meta">${dateDisplay(post.date)} · ${post.read}</div>
@@ -140,7 +166,7 @@ function build() {
   posts.forEach(post => {
     const outDir = path.join(LETTERS_OUT, post.slug);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle));
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle, posts));
   });
 
   // 2. homepage: first 9 visible, rest hidden behind Load More
