@@ -46,6 +46,7 @@ img{max-width:100%;display:block}
   display:flex;align-items:center;justify-content:space-between;
   padding:22px 0;position:relative;z-index:10;
 }
+@media(max-width:560px){.nav{padding:12px 0}}
 .site-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
 .nav-brand{font-weight:800;font-size:21px;letter-spacing:-.02em}
 .nav-brand span{color:var(--gold);-webkit-text-stroke:.4px var(--ink)}
