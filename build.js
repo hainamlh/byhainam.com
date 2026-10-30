@@ -135,11 +135,6 @@ function renderPostPage(post, tmpl, siteStyle, allPosts) {
     .replaceAll('{{DEK}}', post.dek)
     .replaceAll('{{DATE_DISPLAY}}', dateDisplay(post.date))
     .replaceAll('{{READ}}', post.read)
-    .replaceAll('{{SLUG}}', post.slug)
-    // Views/likes are wired to a live counter separately — placeholders for now so
-    // the UI ships without a dangling {{...}} on the page.
-    .replaceAll('{{VIEWS}}', '0')
-    .replaceAll('{{LIKES}}', '0')
     .replace('{{SITE_STYLE}}', siteStyle)
     .replace('{{RELATED}}', relatedSectionHtml(post, allPosts))
     .replace('{{BODY}}', bodyHtml);

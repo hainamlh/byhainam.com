@@ -190,22 +190,6 @@ img{max-width:100%;display:block}
   white-space:nowrap;
 }
 
-/* ===== POST STATS (views + likes) ===== */
-.post-stats{
-  display:flex;align-items:center;gap:18px;margin:0 0 26px;
-  font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-60);
-}
-.post-stat{display:inline-flex;align-items:center;gap:6px}
-.post-stat svg{width:16px;height:16px;flex:none}
-.like-btn{
-  display:inline-flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;
-  font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-60);padding:0;
-}
-.like-btn svg{width:16px;height:16px;flex:none;stroke:var(--ink-60);fill:none;transition:fill .15s,stroke .15s}
-.like-btn:hover svg{stroke:var(--ink)}
-.like-btn.liked{color:var(--ink)}
-.like-btn.liked svg{stroke:var(--red,var(--ink));fill:var(--red,var(--ink))}
-
 /* ===== RELATED POSTS ===== */
 .related-posts{max-width:var(--read);margin:12px auto 0;padding:40px 0 64px;border-top:1px solid var(--line)}
 .related-hd{
