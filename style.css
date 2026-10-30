@@ -191,7 +191,7 @@ img{max-width:100%;display:block}
 }
 
 /* ===== RELATED POSTS ===== */
-.related-posts{max-width:var(--read);margin:12px auto 0;padding:40px 0 64px;border-top:1px solid var(--line)}
+.related-posts{max-width:var(--read);margin:12px auto 0;padding:40px 24px 64px;border-top:1px solid var(--line)}
 .related-hd{
   font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--ink-60);margin:0 0 18px;
