@@ -189,7 +189,7 @@ function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks, basePath =
     .replace('{{BODY}}', bodyHtml);
 }
 
-// ---- "Đọc sách" trên trang chủ: hàng ngang (ảnh bìa + tên/ghi chú), như "Bài liên quan" nhưng to hơn ----
+// ---- "Sách khác"/archive: hàng ngang (ảnh bìa + tên/ghi chú) ----
 function bookRowHtml(book, hidden, basePath = '/sach/') {
   const cls = hidden ? 'book-row blog-hidden' : 'book-row';
   return `      <a href="${basePath}${book.slug}/" class="${cls}">
@@ -198,6 +198,21 @@ function bookRowHtml(book, hidden, basePath = '/sach/') {
           <h3>${book.title}</h3>
           <p>${book.dek}</p>
           <div class="book-meta">${book.read}</div>
+        </div>
+      </a>`;
+}
+
+const ARROW_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+
+// ---- "Sách nên đọc" trên trang chủ: thẻ nhỏ gọn, 3 cột (ảnh bìa + tên/tác giả/mô tả/Đọc ngay) ----
+function bookMiniCardHtml(book, basePath = '/sach/') {
+  return `      <a href="${basePath}${book.slug}/" class="book-mini">
+        ${tileHtml(book, 'book-mini-thumb')}
+        <div>
+          <h3>${book.title}</h3>
+          <div class="book-mini-author">${book.read}</div>
+          <p>${book.dek}</p>
+          <span class="book-mini-cta">Đọc ngay ${ARROW_SVG}</span>
         </div>
       </a>`;
 }
@@ -224,6 +239,7 @@ function build() {
   let bookTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'book.html'), 'utf-8');
   let homeTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'home.html'), 'utf-8');
   let archiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'letters-archive.html'), 'utf-8');
+  let booksArchiveTmpl = fs.readFileSync(path.join(TEMPLATES_DIR, 'books-archive.html'), 'utf-8');
 
   // Cache-bust style.css so a published CSS change shows up immediately instead of
   // being served stale from the browser/host cache (the file name never changed before).
@@ -233,6 +249,7 @@ function build() {
   bookTmpl = bookTmpl.replace('/style.css', cssHref);
   homeTmpl = homeTmpl.replace('/style.css', cssHref);
   archiveTmpl = archiveTmpl.replace('/style.css', cssHref);
+  booksArchiveTmpl = booksArchiveTmpl.replace('/style.css', cssHref);
 
   // 1. individual post pages
   posts.forEach(post => {
@@ -248,21 +265,16 @@ function build() {
     fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(book, bookTmpl, siteStyle, books, socialLinks, '/sach/', 'Sách khác'));
   });
 
-  // 2. homepage: Blog = first 9 visible, rest hidden; Đọc sách = first 3 visible, rest hidden
+  // 2. homepage: Blog = first 9 visible, rest hidden; Sách nên đọc = 3 cuốn mới nhất, "Xem tất cả" -> /sach/
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
   const bookSection = books.length ? `<section class="section book-section">
   <div class="wrap">
-    <div class="book-wrap">
-      <div class="section-hd center">
-        <div class="eyebrow">Đọc sách</div>
-        <h2>Chia sẻ một số quyển sách<br>tôi tâm đắc</h2>
-      </div>
-      <div class="blog-grid book-list" id="bookGrid">
-${books.map((b, i) => bookRowHtml(b, i >= 3, '/sach/')).join('\n')}
-      </div>
-      <div class="load-more-wrap">
-        <button class="btn-load" hidden>Load More</button>
-      </div>
+    <div class="book-hd">
+      <h2><span class="book-hd-dash"></span> Sách nên đọc</h2>
+      <a href="/sach/" class="book-viewall">Xem tất cả ${ARROW_SVG}</a>
+    </div>
+    <div class="book-grid3">
+${books.slice(0, 3).map(b => bookMiniCardHtml(b, '/sach/')).join('\n')}
     </div>
   </div>
 </section>` : '';
@@ -279,7 +291,12 @@ ${books.map((b, i) => bookRowHtml(b, i >= 3, '/sach/')).join('\n')}
   fs.mkdirSync(LETTERS_OUT, { recursive: true });
   fs.writeFileSync(path.join(LETTERS_OUT, 'index.html'), archiveTmpl.replace('{{BLOG_GRID_ALL}}', archiveGrid).replace('{{SITE_STYLE}}', siteStyle).replaceAll('{{SOCIAL_ICONS}}', socialIcons));
 
-  console.log(`Built ${posts.length} posts, ${books.length} books -> homepage, letters archive, ${posts.length} post pages, ${books.length} book pages.`);
+  // 4. full books archive: nothing hidden ("Xem tất cả" từ trang chủ trỏ về đây)
+  const bookListAll = books.map(b => bookRowHtml(b, false, '/sach/')).join('\n');
+  fs.mkdirSync(BOOKS_OUT, { recursive: true });
+  fs.writeFileSync(path.join(BOOKS_OUT, 'index.html'), booksArchiveTmpl.replace('{{BOOK_LIST_ALL}}', bookListAll).replace('{{SITE_STYLE}}', siteStyle).replaceAll('{{SOCIAL_ICONS}}', socialIcons));
+
+  console.log(`Built ${posts.length} posts, ${books.length} books -> homepage, letters archive, books archive, ${posts.length} post pages, ${books.length} book pages.`);
 }
 
 build();

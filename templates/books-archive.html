@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đọc sách — byhainam</title>
+<meta name="description" content="Những cuốn sách tôi đọc và tâm đắc về giao dịch, tâm lý thị trường và đầu tư.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+{{SITE_STYLE}}
+</style>
+</head>
+<body>
+
+<div class="wrap site-header">
+  <nav class="nav">
+    <a href="/" class="nav-brand">Hải Nam's Blog</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      {{SOCIAL_ICONS}}
+    </div>
+  </nav>
+</div>
+
+<header class="hero" style="padding-bottom:48px">
+  <div class="wrap">
+    <div class="eyebrow">Đọc sách</div>
+    <h1 style="font-size:clamp(28px,4.4vw,42px)">Sách nên đọc</h1>
+    <p>Những cuốn sách tôi đọc và tâm đắc, về giao dịch, tâm lý thị trường và đầu tư.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:8px">
+  <div class="wrap">
+    <div class="book-wrap">
+      <div class="blog-grid book-list">
+{{BOOK_LIST_ALL}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    {{SOCIAL_ICONS}}
+    <span class="footer-copy">© 2026 byhainam.com · Suy nghĩ, chia sẻ về giao dịch</span>
+  </div>
+</footer>
+
+<script>
+  var t = document.getElementById('navToggle');
+  var l = document.getElementById('navLinks');
+  if (t && l) t.addEventListener('click', function(){ l.classList.toggle('open'); });
+</script>
+</body>
+</html>
+
+
+
