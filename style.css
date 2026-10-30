@@ -304,7 +304,8 @@ img{max-width:100%;display:block}
 
 /* ===== SIGNATURE (closing sign-off) ===== */
 .signature{padding:0 0 32px;text-align:center;}
-.signature .wrap{padding-top:28px;border-top:1px solid var(--line)}
+.signature .wrap{padding-top:28px;border-top:none;position:relative}
+.signature .wrap::before{content:'';position:absolute;top:0;left:25%;width:50%;height:1px;background:var(--line)}
 .signature-mark{font-family:var(--font-base);font-style:italic;font-size:clamp(30px,4vw,42px);color:var(--ink);margin:0 0 10px}
 .signature-role{font-size:13px;color:var(--ink-60);margin-bottom:24px}
 .signature-tagline{font-size:14.5px;color:var(--ink-60);max-width:420px;margin:0 auto 24px;line-height:1.7}
