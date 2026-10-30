@@ -202,11 +202,11 @@ img{max-width:100%;display:block}
 }
 .related-row:first-of-type{border-top:none}
 .related-thumb{
-  width:84px;height:64px;flex:none;border-radius:8px;overflow:hidden;
+  width:52px;height:52px;flex:none;border-radius:8px;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
 .related-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.related-thumb svg{width:22px;height:22px}
+.related-thumb svg{width:16px;height:16px}
 .related-date{
   display:block;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-40);margin-bottom:4px;
 }
