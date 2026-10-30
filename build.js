@@ -189,6 +189,19 @@ function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks, basePath =
     .replace('{{BODY}}', bodyHtml);
 }
 
+// ---- "Đọc sách" trên trang chủ: hàng ngang (ảnh bìa + tên/ghi chú), như "Bài liên quan" nhưng to hơn ----
+function bookRowHtml(book, hidden, basePath = '/sach/') {
+  const cls = hidden ? 'book-row blog-hidden' : 'book-row';
+  return `      <a href="${basePath}${book.slug}/" class="${cls}">
+        ${tileHtml(book, 'book-thumb')}
+        <div>
+          <h3>${book.title}</h3>
+          <p>${book.dek}</p>
+          <div class="book-meta">${book.read}</div>
+        </div>
+      </a>`;
+}
+
 function cardHtml(post, hidden, basePath = '/letters/') {
   const cls = hidden ? 'blog-card blog-hidden' : 'blog-card';
   return `      <a href="${basePath}${post.slug}/" class="${cls}">
@@ -243,8 +256,8 @@ function build() {
       <div class="eyebrow">Đọc sách</div>
       <h2>Những cuốn sách tôi đọc<br>và ghi chú lại</h2>
     </div>
-    <div class="blog-grid" id="bookGrid">
-${books.map((b, i) => cardHtml(b, i >= 3, '/sach/')).join('\n')}
+    <div class="blog-grid book-list" id="bookGrid">
+${books.map((b, i) => bookRowHtml(b, i >= 3, '/sach/')).join('\n')}
     </div>
     <div class="load-more-wrap">
       <button class="btn-load" hidden>Load More</button>
