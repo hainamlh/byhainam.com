@@ -268,7 +268,7 @@ img{max-width:100%;display:block}
 @media(max-width:560px){.book-thumb{width:108px;height:142px;padding:8px}.book-row{gap:16px;padding:18px 0}}
 
 /* ===== "Sách" trên trang chủ: dùng chung kiểu section-hd.center như Blog, lưới 3 cột ===== */
-.book-section{padding-top:80px;padding-bottom:40px}
+.book-section{padding-top:36px;padding-bottom:40px}
 .book-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 28px;padding:28px 0}
 .book-mini{display:flex;gap:14px;text-decoration:none;color:inherit;align-items:flex-start}
 .book-mini-thumb{
