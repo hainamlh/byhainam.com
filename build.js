@@ -269,15 +269,15 @@ function build() {
   const homeGrid = posts.map((p, i) => cardHtml(p, i >= 9)).join('\n');
   const bookSection = books.length ? `<section class="section book-section">
   <div class="wrap">
-    <div class="book-hd">
-      <div>
-        <h2><span class="book-hd-dash"></span> Sách</h2>
-        <p class="book-hd-sub">Những quyển sách về giao dịch, đầu tư tôi đã đọc và tâm đắc</p>
-      </div>
-      <a href="/sach/" class="book-viewall">Xem tất cả ${ARROW_SVG}</a>
+    <div class="section-hd center">
+      <div class="eyebrow">Sách</div>
+      <h2>Những quyển sách về giao dịch, đầu tư<br>tôi đã đọc và tâm đắc</h2>
     </div>
     <div class="book-grid3">
 ${books.slice(0, 3).map(b => bookMiniCardHtml(b, '/sach/')).join('\n')}
+    </div>
+    <div class="load-more-wrap">
+      <a href="/sach/" class="btn-load">Xem tất cả</a>
     </div>
   </div>
 </section>` : '';

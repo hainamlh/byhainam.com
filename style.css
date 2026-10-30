@@ -263,15 +263,8 @@ img{max-width:100%;display:block}
 .book-row:hover h3{color:var(--green-dark)}
 @media(max-width:560px){.book-thumb{width:108px;height:142px;padding:8px}.book-row{gap:16px;padding:18px 0}}
 
-/* ===== "Sách nên đọc" trên trang chủ: header (gạch + tiêu đề / Xem tất cả) + lưới 3 cột ===== */
-.book-section{padding-top:64px;padding-bottom:64px}
-.book-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:40px;flex-wrap:wrap}
-.book-hd h2{font-family:var(--font-base);font-weight:500;font-size:clamp(20px,2.4vw,26px);letter-spacing:-.01em;margin:0;display:flex;align-items:center;gap:12px}
-.book-hd-dash{display:inline-block;width:28px;height:1px;background:var(--ink)}
-.book-hd-sub{font-size:14px;color:var(--ink-60);line-height:1.6;margin:8px 0 0 40px;max-width:420px}
-.book-hd .book-viewall{margin-top:4px}
-.book-viewall{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-base);font-size:13px;color:var(--ink-60)}
-.book-viewall:hover{color:var(--ink)}
+/* ===== "Sách" trên trang chủ: dùng chung kiểu section-hd.center như Blog, lưới 3 cột ===== */
+.book-section{padding-top:80px;padding-bottom:80px}
 .book-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 28px}
 .book-mini{display:flex;gap:14px;text-decoration:none;color:inherit;align-items:flex-start}
 .book-mini-thumb{width:84px;height:112px;flex:none;border-radius:4px;overflow:hidden;background:#111111;display:flex;align-items:center;justify-content:center}
@@ -284,7 +277,7 @@ img{max-width:100%;display:block}
 .book-mini:hover h3{color:var(--green-dark)}
 .book-mini:hover .book-mini-cta{color:var(--ink)}
 @media(max-width:860px){.book-grid3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.book-grid3{grid-template-columns:1fr}.book-hd{margin-bottom:24px}}
+@media(max-width:560px){.book-grid3{grid-template-columns:1fr}}
 .blog-card h3{font-family:var(--font-base);font-weight:500;font-size:19px;margin:0 0 6px;letter-spacing:-.01em;line-height:1.35}
 .blog-card:hover h3{color:var(--green-dark)}
 .blog-card p{font-size:13.5px;color:var(--ink-60);line-height:1.6;margin:0 0 10px}
@@ -293,7 +286,7 @@ img{max-width:100%;display:block}
 .load-more-wrap{text-align:center;margin-top:44px}
 .blog-section{padding-bottom:20px}
 .btn-load{
-  background:transparent;color:var(--ink);
+  display:inline-block;background:transparent;color:var(--ink);border:1px solid var(--line);
   padding:11px 28px;border-radius:100px;cursor:pointer;
   font-family:var(--font-base);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
 }
