@@ -31,3 +31,5 @@ Không mua chỉ vì giá giảm sâu hay bán chỉ vì giá tăng cao. Cần q
 > Thông điệp cốt lõi: Giá cho chúng ta biết thị trường đang di chuyển như thế nào, khối lượng giúp hiểu được nỗ lực phía sau chuyển động đó. Hãy học cách đọc cung cầu thay vì chỉ phản ứng với những biến động giá.
 
 Trader giỏi không chỉ nhìn thấy giá đang tăng hay giảm, mà còn tìm cách hiểu điều gì đang diễn ra phía sau mỗi chuyển động.
+
+![](/uploads/sach2.jpg)
