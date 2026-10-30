@@ -330,6 +330,10 @@ img{max-width:100%;display:block}
 .social-icons a.icon-img img{width:18px;height:18px;object-fit:contain;border-radius:22%;display:block}
 .social-icons-hero .social-icons a.icon-img img{width:45px;height:45px}
 .footer-row .social-icons{justify-content:flex-start}
+@media(max-width:560px){
+  .footer-row{justify-content:center;text-align:center}
+  .footer-row .social-icons{justify-content:center}
+}
 
 /* Mục "Theo dõi" trên trang chủ: icon to hơn mặc định (36px -> 90px) */
 .social-icons-hero{padding:0}
