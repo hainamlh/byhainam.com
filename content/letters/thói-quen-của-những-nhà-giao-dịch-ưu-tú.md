@@ -4,7 +4,7 @@ date: 2026-07-30
 dek: Đây là bản tóm tắt những tìm hiểu chuyên sâu về các hành vi đã thúc đẩy
   những nhà giao dịch ưu tú thành công trong dài hạn.
 read: 3 phút đọc
-image: /uploads/man.png
+image: /uploads/uu-tu.jfif
 bg: light
 ---
 Các nhà giao dịch ưu tú không phải ngẫu nhiên mà vươn lên được đến đỉnh cao. 
@@ -12,6 +12,8 @@ Các nhà giao dịch ưu tú không phải ngẫu nhiên mà vươn lên đư�
 Kết quả xuất sắc của họ đến từ một tập hợp các thói quen, kỷ luật và khung tâm lý tích lũy qua nhiều năm luyện tập có chủ đích.
 
 > Trong khi hầu hết các nhà giao dịch khác đi tìm đường tắt bằng những khoản lợi nhuận lớn trong thời gian ngắn thì các nhà giao dịch thành công xây dựng các hệ thống hỗ trợ sự nhất quán, rõ ràng và bền lâu.
+
+![](/uploads/uu-tu.jfif)
 
 Dưới đây là 13 thói quen phân biệt các nhà giao dịch xuất sắc với phần còn lại:
 
