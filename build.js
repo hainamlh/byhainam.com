@@ -55,6 +55,26 @@ function loadPosts() {
   return posts;
 }
 
+// ---- small hex helpers so other theme tokens can follow the admin's 2 base colors ----
+function hexToRgb(hex) {
+  const h = hex.replace('#', '');
+  const v = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+  const n = parseInt(v, 16);
+  return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
+}
+function rgbToHex({ r, g, b }) {
+  const c = v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0');
+  return `#${c(r)}${c(g)}${c(b)}`;
+}
+function luminance({ r, g, b }) { return (0.299 * r + 0.587 * g + 0.114 * b) / 255; }
+// Nudge a color toward white (amt>0) or black (amt<0), amt in [-1,1].
+function shade(hex, amt) {
+  const { r, g, b } = hexToRgb(hex);
+  const target = amt > 0 ? 255 : 0;
+  const k = Math.abs(amt);
+  return rgbToHex({ r: r + (target - r) * k, g: g + (target - g) * k, b: b + (target - b) * k });
+}
+
 // ---- site-wide display overrides, set once in admin ("Cài đặt giao diện") ----
 // Applies to every page: homepage, letters archive, and all post pages.
 function loadSiteStyleCss() {
@@ -62,8 +82,21 @@ function loadSiteStyleCss() {
   const raw = fs.readFileSync(SETTINGS_FILE, 'utf-8');
   const { data } = matter(raw);
   const rules = [];
-  if (data.siteBg) rules.push(`:root{--paper:${data.siteBg}}`);
-  if (data.siteColor) rules.push(`:root{--ink:${data.siteColor}}`);
+  if (data.siteBg) {
+    rules.push(`:root{--paper:${data.siteBg}}`);
+    // --card is the "block" background (product cards, CTA box, alt sections) — keep it
+    // close to the main background instead of staying hardcoded black.
+    const isDark = luminance(hexToRgb(data.siteBg)) < 0.5;
+    const card = shade(data.siteBg, isDark ? 0.08 : -0.04);
+    const line = shade(data.siteBg, isDark ? 0.2 : -0.15);
+    rules.push(`:root{--card:${card};--line:${line};--line-strong:${shade(data.siteBg, isDark ? 0.32 : -0.28)}}`);
+  }
+  if (data.siteColor) {
+    rules.push(`:root{--ink:${data.siteColor}}`);
+    // Hover/accent tokens (green, green-dark, gold) were hardcoded to always match the old
+    // white ink — follow the chosen text color instead so hover states never go invisible.
+    rules.push(`:root{--green:${data.siteColor};--green-dark:${data.siteColor};--gold:${data.siteColor}}`);
+  }
   if (data.fontSize) rules.push(`.post-body{font-size:${data.fontSize}px}`);
   if (data.fontFamily) rules.push(`.post-body{font-family:${data.fontFamily}}`);
   return rules.join('\n');
