@@ -254,7 +254,7 @@ function build() {
   <div class="wrap book-wrap">
     <div class="section-hd center">
       <div class="eyebrow">Đọc sách</div>
-      <h2>Những cuốn sách tôi đọc<br>và ghi chú lại</h2>
+      <h2>Chia sẻ một số quyển sách<br>tôi tâm đắc</h2>
     </div>
     <div class="blog-grid book-list" id="bookGrid">
 ${books.map((b, i) => bookRowHtml(b, i >= 3, '/sach/')).join('\n')}
