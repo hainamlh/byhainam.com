@@ -2,7 +2,7 @@
 title: Chọn gì để trade?
 date: 2026-10-31
 dek: Chọn gì để trade trong năm, hay tại bất cứ thời điểm nào
-read: 3 phút đọc
+read: 5 phút đọc
 bg: light
 ---
 Tôi để ý thấy ở các thị trường khác, dân trade thường chung thủy với một hoặc hai loại hàng hóa. Trade BTC thì chỉ BTC, trade vàng dầu thì cả năm chỉ nhìn vàng dầu, trade chỉ số thì chỉ tập trung vào một con chỉ số. Họ không có khái niệm để xem hôm nay con nào có sóng.
