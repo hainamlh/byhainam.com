@@ -12,9 +12,8 @@ Khi tham gia vào các thị trường tài chính, kiểu gì bạn cũng đi l
 
 Bản chất của giá là vô chừng. Sóng tăng chỉ hình thành sau khi nó đã tăng, sóng giảm chỉ nhận diện được khi nó đang giảm, sideway cũng vậy. Trong con mỗi con sóng cơ sở thì lại có các con sóng thành phần, nghĩa là giá không di chuyển theo đường thẳng mà trồi sụt và zic-zac. 
 
-
+Dài hay ngắn không quan trọng, quan trọng là xu hướng và vị thế.
 
 Điều này làm cho tiền của chúng ta sẽ nhảy múa từng phút từng giờ.
-
 
 Hầu hết mọi người sẽ bắt đầu từ việc lướt sóng mua bán nhanh. Ai mà chẳng muốn kiếm tiền nhanh. Khi đồng tiền nhảy nhót mọi lúc trong tài khoản thì ai mà chẳng khởi lên lòng tham và nỗi sợ. Sợ mất khoản tiền chưa thuộc về mình, sợ tự nhận rằng mình thất bại nên không dám cắt lỗ, sợ không bán thì giá sẽ quay đầu giảm .v.v.
