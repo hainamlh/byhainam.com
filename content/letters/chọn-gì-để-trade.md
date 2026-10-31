@@ -6,9 +6,9 @@ read: 5 phút đọc
 image: /uploads/gatizqlnsj4qpg28rwb_3fvotqopipyux-etqnhdjqtmlt5snbrjynowhqakxqjg03hbj5deg4pgmuggzokgr0rngjuzsiffcv6xlczr-ou67d0etlbcfd49j_xr3xsi8oteondze8581m6x-vtkkhfzhdg27cmk4swbqs348ns-gv5ciwjmnm0d-5xgbwvi.jpeg
 bg: light
 ---
-![](/uploads/gatizqlnsj4qpg28rwb_3fvotqopipyux-etqnhdjqtmlt5snbrjynowhqakxqjg03hbj5deg4pgmuggzokgr0rngjuzsiffcv6xlczr-ou67d0etlbcfd49j_xr3xsi8oteondze8581m6x-vtkkhfzhdg27cmk4swbqs348ns-gv5ciwjmnm0d-5xgbwvi.jpeg)
-
 Tôi để ý thấy ở các thị trường khác, dân trade thường chung thủy với một hoặc hai loại hàng hóa. Trade BTC thì chỉ BTC, trade vàng dầu thì cả năm chỉ nhìn vàng dầu, trade chỉ số thì chỉ tập trung vào một con chỉ số. Họ không có khái niệm đi tìm con nào có sóng.
+
+![](/uploads/gatizqlnsj4qpg28rwb_3fvotqopipyux-etqnhdjqtmlt5snbrjynowhqakxqjg03hbj5deg4pgmuggzokgr0rngjuzsiffcv6xlczr-ou67d0etlbcfd49j_xr3xsi8oteondze8581m6x-vtkkhfzhdg27cmk4swbqs348ns-gv5ciwjmnm0d-5xgbwvi.jpeg)
 
 Mỗi loại hàng hóa có một tính cách riêng, và tính cách đó lặp lại. Vàng phản ứng với lãi suất và địa chính trị. Dầu nhảy theo cung cầu, chiến tranh, tồn kho. BTC cũng có biên độ và hành vi đám đông riêng... Trade mãi một loại, trader dần nắm vững xu hướng chủ đạo, biên độ và cũng thuộc lòng luôn cái nhịp gía chạy như thuộc lòng tính khí người thân, dễ nhận ra khi nào thì sắp nổi nóng, khi nào thì đang giận hờn.
 
