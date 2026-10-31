@@ -2,7 +2,7 @@
 siteBg: "#ffffff"
 siteColor: "#241e1e"
 fontSize: "17"
-fontFamily: Georgia, serif
+fontFamily: "'Poppins', sans-serif"
 zaloUrl: https://zalo.me/g/bsevtt375
 socialLinks:
   - platform: substack
