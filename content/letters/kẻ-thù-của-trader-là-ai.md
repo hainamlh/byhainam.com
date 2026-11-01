@@ -1,5 +1,6 @@
 ---
 title: Kẻ thù của trader là ai?
+draft: true
 date: 2026-11-01
 dek: Biết đúng kẻ thù mới tiêu diệt được
 read: 3 phút đọc
