@@ -7,6 +7,4 @@ bg: light
 ---
 Đội lái, tạo lập, broker, quỹ, những người phản biện mình ... là đối thủ hay kẻ thù của các trader à?
 
-
-
-Kẻ thủ của trader là chính cái tôi của họ.
+Kẻ thủ của trader là chính cái tôi của họ. Chúng ta không thể thắng một trận chiến mà không biết kẻ thù của mình là ai.
