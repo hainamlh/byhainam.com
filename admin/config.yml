@@ -23,6 +23,13 @@ collections:
     slug: "{{slug}}"
     summary: "{{title}} — {{date}}"
     sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Nháp (chưa công bố)"
+        field: draft
+        pattern: true
+      - label: "Đã công bố"
+        field: draft
+        pattern: false
     view_groups:
       - label: "Theo năm"
         field: date
@@ -34,6 +41,12 @@ collections:
       preview: false
     fields:
       - { label: "Tiêu đề", name: "title", widget: "string" }
+      - label: "Lưu nháp (bật = chỉ lưu ý tưởng, KHÔNG hiện trên web)"
+        name: "draft"
+        widget: "boolean"
+        default: true
+        required: false
+        hint: "Bật = Lưu nháp, bài sẽ KHÔNG hiện trên web. Tắt = Công bố, bài hiện công khai. Bài đã công bố có thể bật lại để dừng công bố (gỡ khỏi web, không bị xoá nội dung)."
       - { label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Mô tả ngắn (hiện dưới tiêu đề & ở thẻ bài viết)", name: "dek", widget: "text" }
       - { label: "Thời gian đọc", name: "read", widget: "string", default: "3 phút đọc" }

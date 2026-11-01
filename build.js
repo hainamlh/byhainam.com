@@ -76,6 +76,7 @@ function loadCollection(dir) {
       read: data.read || '3 phút đọc',
       bg: data.bg || 'light',
       image: data.image || '',
+      draft: !!data.draft,
       bodyMd: content.trim(),
     };
   });
@@ -254,7 +255,9 @@ function cardHtml(post, hidden, basePath = '/letters/') {
 }
 
 function build() {
-  const posts = loadPosts();
+  const allPosts = loadPosts();
+  const posts = allPosts.filter(p => !p.draft); // chỉ bài đã "Công bố" mới lên web
+  const draftPosts = allPosts.filter(p => p.draft);
   const books = loadBooks();
   const siteStyle = loadSiteStyleCss();
   const socialLinks = loadSocialLinks();
@@ -278,11 +281,17 @@ function build() {
   archiveTmpl = archiveTmpl.replace('/style.css', cssHref);
   booksArchiveTmpl = booksArchiveTmpl.replace('/style.css', cssHref);
 
-  // 1. individual post pages
+  // 1. individual post pages (chỉ build bài đã công bố)
   posts.forEach(post => {
     const outDir = path.join(LETTERS_OUT, post.slug);
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), renderPostPage(post, postTmpl, siteStyle, posts, socialLinks, '/letters/', 'Bài liên quan'));
+  });
+
+  // 1c. bài đang là nháp: nếu trước đó đã công bố (còn trang cũ trên đĩa) -> xoá đi = "dừng công bố"
+  draftPosts.forEach(post => {
+    const outDir = path.join(LETTERS_OUT, post.slug);
+    if (fs.existsSync(outDir)) fs.rmSync(outDir, { recursive: true, force: true });
   });
 
   // 1b. individual book pages
