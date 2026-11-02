@@ -129,7 +129,7 @@ collections:
             required: false
             options:
               - { label: "Nhỏ (15px)", value: "15" }
-              - { label: "Vừa (17px — mặc định)", value: "17" }
+              - { label: "Vừa (16px — mặc định)", value: "16" }
               - { label: "Lớn (19px)", value: "19" }
               - { label: "Rất lớn (21px)", value: "21" }
           - label: "Font chữ nội dung bài viết"

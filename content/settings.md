@@ -1,7 +1,7 @@
 ---
 siteBg: "#ffffff"
 siteColor: "#241e1e"
-fontSize: "17"
+fontSize: "16"
 fontFamily: "'Merriweather', serif"
 zaloUrl: https://zalo.me/g/bsevtt375
 socialLinks:

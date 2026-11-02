@@ -188,7 +188,7 @@ img{max-width:100%;display:block}
   line-height:1.22;letter-spacing:-.01em;margin:0 0 18px;text-align:left;
 }
 .post-dek{font-size:17px;font-weight:600;color:var(--ink-75);line-height:1.7;max-width:var(--read);text-align:left;margin:0 auto;}
-.post-body{padding-top:16px;padding-bottom:64px;font-size:17px;line-height:1.85;color:var(--ink);text-align:left;max-width:var(--read);margin:0 auto;}
+.post-body{padding-top:16px;padding-bottom:64px;font-size:16px;line-height:1.85;color:var(--ink);text-align:left;max-width:var(--read);margin:0 auto;}
 .post-body p{margin:0 0 22px}
 .post-body h1{font-family:var(--font-base);font-weight:700;font-size:28px;margin:48px 0 18px;letter-spacing:-.01em;line-height:1.25}
 .post-body h2{font-family:var(--font-base);font-weight:500;font-size:24px;margin:44px 0 16px;letter-spacing:-.01em}
@@ -198,7 +198,7 @@ img{max-width:100%;display:block}
 .post-body strong{color:var(--ink);font-weight:600}
 .post-body blockquote{
   margin:32px 0;padding:4px 0 4px 22px;border-left:2px solid var(--green);
-  font-family:var(--font-base);font-style:italic;font-weight:400;font-size:16px;color:var(--ink-75);line-height:1.85;
+  font-family:var(--font-base);font-style:italic;font-weight:400;font-size:15px;color:var(--ink-75);line-height:1.85;
 }
 .post-body blockquote p{margin:0 0 16px}
 .post-body blockquote p:last-child{margin-bottom:0}
