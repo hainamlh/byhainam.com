@@ -203,14 +203,18 @@ ${related.map(p => relatedRowHtml(p, basePath)).join('\n')}
 }
 
 const DISCLAIMER = 'Đây là quan điểm cá nhân không phải khuyến nghị đầu tư.';
-// Nam đôi khi đã tự gõ sẵn dòng này cuối bài (vd: "*Đây là quan điểm...*") -> tránh in lặp 2 lần.
-function endsWithDisclaimer(md) {
-  const lastLine = md.trim().split('\n').pop().replace(/[*_]/g, '').trim();
-  return lastLine === DISCLAIMER;
+// Nam đôi khi đã tự gõ sẵn dòng này cuối bài (vd: "*Đây là quan điểm...*") -> bỏ dòng tự gõ đó ra,
+// rồi luôn tự chèn lại 1 bản chuẩn (đồng bộ style cho mọi bài) để không bị lặp hay lệch style.
+function stripManualDisclaimer(md) {
+  const lines = md.trim().split('\n');
+  const lastLine = lines[lines.length - 1].replace(/[*_]/g, '').trim();
+  if (lastLine === DISCLAIMER) lines.pop();
+  return lines.join('\n').trim();
 }
 function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks, basePath = '/letters/', relatedHeading = 'Bài liên quan') {
-  let bodyHtml = marked.parse(post.bodyMd);
-  if (basePath === '/letters/' && !endsWithDisclaimer(post.bodyMd)) {
+  const bodyMd = basePath === '/letters/' ? stripManualDisclaimer(post.bodyMd) : post.bodyMd;
+  let bodyHtml = marked.parse(bodyMd);
+  if (basePath === '/letters/') {
     bodyHtml += `\n<p class="post-disclaimer"><em>${DISCLAIMER}</em></p>`;
   }
   return tmpl
