@@ -25,4 +25,4 @@ Công thức giao dịch khác với phương pháp giao dịch. Phương pháp 
 | Nguyên lý | Công thức |
 | --- | --- |
 | Giao dịch theo xu hướng | Xác định xu hướng bằng đáy đỉnh, MA200 |
-| Tư duy lợi nhuận | Không mua đáy bán đỉnh, mà ăn phần thân |
+| Tư duy lợi nhuận | Không mua đáy bán đỉnh, mà ăn phần thân con sóng tăng |
