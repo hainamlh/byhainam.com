@@ -1,6 +1,6 @@
 ---
 title: Công thức giao dịch
-draft: true
+draft: false
 date: 2026-11-02
 dek: Công thức giao dịch là các tiêu chí cứng, như một cộng một bằng hai, nó vừa
   bảo vệ và cũng vừa giới hạn các giao dịch của bạn
