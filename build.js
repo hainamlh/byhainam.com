@@ -202,8 +202,17 @@ ${related.map(p => relatedRowHtml(p, basePath)).join('\n')}
   </div>`;
 }
 
+const DISCLAIMER = 'Đây là quan điểm cá nhân không phải khuyến nghị đầu tư.';
+// Nam đôi khi đã tự gõ sẵn dòng này cuối bài (vd: "*Đây là quan điểm...*") -> tránh in lặp 2 lần.
+function endsWithDisclaimer(md) {
+  const lastLine = md.trim().split('\n').pop().replace(/[*_]/g, '').trim();
+  return lastLine === DISCLAIMER;
+}
 function renderPostPage(post, tmpl, siteStyle, allPosts, socialLinks, basePath = '/letters/', relatedHeading = 'Bài liên quan') {
-  const bodyHtml = marked.parse(post.bodyMd);
+  let bodyHtml = marked.parse(post.bodyMd);
+  if (basePath === '/letters/' && !endsWithDisclaimer(post.bodyMd)) {
+    bodyHtml += `\n<p class="post-disclaimer"><em>${DISCLAIMER}</em></p>`;
+  }
   return tmpl
     .replaceAll('{{TITLE}}', post.title)
     .replaceAll('{{DEK}}', post.dek)
