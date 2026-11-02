@@ -9,6 +9,71 @@
 <body>
   <script src="https://unpkg.com/decap-cms@3.11.0/dist/decap-cms.js"></script>
   <script>
+    // Nút "Bảng (Table)" trong thanh soạn thảo nội dung bài viết: bấm vào, điền
+    // tiêu đề cột + các hàng trong 1 form nhỏ, CMS tự sinh đúng cú pháp bảng
+    // markdown (GFM) và chèn vào bài — không cần tự gõ tay cú pháp | --- |.
+    (function () {
+      function splitCells(line) {
+        return line.replace(/^\s*\|/, '').replace(/\|\s*$/, '').split('|').map(function (c) { return c.trim(); });
+      }
+
+      CMS.registerEditorComponent({
+        id: 'table',
+        label: 'Bảng (Table)',
+        fields: [
+          {
+            name: 'headers',
+            label: 'Tiêu đề các cột',
+            widget: 'string',
+            hint: 'Cách nhau bằng dấu | . Ví dụ: Mã CP | Giá mục tiêu | Khuyến nghị',
+            default: 'Cột 1 | Cột 2',
+          },
+          {
+            name: 'rows',
+            label: 'Các hàng dữ liệu',
+            widget: 'text',
+            hint: 'Mỗi dòng là 1 hàng, các ô trong 1 hàng cách nhau bằng dấu | . Ví dụ dòng 1: HPG | 32.000 | Mua',
+            default: 'A | 1\nB | 2',
+          },
+        ],
+        // Nhận diện 1 khối bảng markdown GFM đã có trong bài (để mở lại sửa được).
+        pattern: /^\|(.+)\|[ \t]*\n\|([ \t:|-]+)\|[ \t]*\n((?:\|.*\|[ \t]*\n?)*)/,
+        fromBlock: function (match) {
+          var headerLine = match[1] || '';
+          var bodyBlock = match[3] || '';
+          var headers = splitCells(headerLine).join(' | ');
+          var rows = bodyBlock
+            .split('\n')
+            .map(function (l) { return l.trim(); })
+            .filter(Boolean)
+            .map(function (line) { return splitCells(line).join(' | '); })
+            .join('\n');
+          return { headers: headers, rows: rows };
+        },
+        toBlock: function (obj) {
+          var headers = (obj.headers || '').split('|').map(function (s) { return s.trim(); }).filter(Boolean);
+          if (!headers.length) return '';
+          var headerLine = '| ' + headers.join(' | ') + ' |';
+          var sepLine = '|' + headers.map(function () { return ' --- '; }).join('|') + '|';
+          var rowLines = (obj.rows || '')
+            .split('\n')
+            .map(function (l) { return l.trim(); })
+            .filter(Boolean)
+            .map(function (line) {
+              var cells = line.split('|').map(function (c) { return c.trim(); });
+              while (cells.length < headers.length) cells.push('');
+              return '| ' + cells.slice(0, headers.length).join(' | ') + ' |';
+            })
+            .join('\n');
+          return headerLine + '\n' + sepLine + (rowLines ? '\n' + rowLines : '') + '\n';
+        },
+        toPreview: function (obj) {
+          return 'Bảng: ' + (obj.headers || '');
+        },
+      });
+    })();
+  </script>
+  <script>
     // Decap CMS mặc định bắt bấm "Công bố" rồi mới hiện menu "Công bố ngay".
     // Script này tự bấm luôn "Công bố ngay" ngay khi menu đó vừa xuất hiện,
     // nên chỉ cần bấm "Công bố" 1 lần là xuất bản bài luôn, không cần bấm thêm.
