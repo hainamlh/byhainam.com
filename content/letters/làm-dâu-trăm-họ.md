@@ -1,5 +1,6 @@
 ---
 title: Làm dâu trăm họ
+draft: true
 date: 2026-11-01
 dek: Thực trạng đến từ nhu cầu nhưng phải giải quyết bằng bản lĩnh
 read: 3 phút đọc
