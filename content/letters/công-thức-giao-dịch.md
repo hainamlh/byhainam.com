@@ -5,6 +5,7 @@ date: 2026-11-02
 dek: Công thức giao dịch là các tiêu chí cứng, như một cộng một bằng hai, nó vừa
   bảo vệ và cũng vừa giới hạn các giao dịch của bạn
 read: 3 phút đọc
+image: /uploads/sufuu.jpg
 bg: light
 ---
 Công thức giao dịch khác với phương pháp giao dịch. Phương pháp giao dịch là một tổng thể từ tư duy, suy nghĩ, nguyên lý, lợi nhuận, rủi ro kỳ vọng rồi cuối cùng mới đến tiêu chí vào lệnh, thoát lệnh.
