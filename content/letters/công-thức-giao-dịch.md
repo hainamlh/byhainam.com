@@ -9,6 +9,8 @@ bg: light
 ---
 Công thức giao dịch khác với phương pháp giao dịch. Phương pháp giao dịch là một tổng thể từ tư duy, suy nghĩ, nguyên lý, lợi nhuận, rủi ro kỳ vọng rồi cuối cùng mới đến tiêu chí vào lệnh, thoát lệnh.
 
+![](/uploads/sufu.jpg)
+
 > Trong tiểu thuyết *Anh Hùng Xạ Điêu* của Kim Dung, Cửu Âm Chân Kinh là một bộ bí kíp võ công được cả giang hồ khao khát. Tương truyền, người sở hữu nó có thể lĩnh hội những tuyệt học võ công thượng thừa. Vì vậy, các cao thủ hàng đầu võ lâm không tiếc công sức tranh đoạt, thậm chí tổ chức Hoa Sơn Luận Kiếm để phân định ai xứng đáng sở hữu bí kíp. 
 >
 > Thế nhưng, 
