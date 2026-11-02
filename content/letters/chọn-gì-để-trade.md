@@ -18,7 +18,7 @@ Thường thì hôm nay theo dòng tiền vào thép, mai nhảy sang bất đ�
 
 Hệ quả là kinh nghiệm bị pha loãng. Một người trade 50 mã trong một năm không có 50 lần kinh nghiệm, họ chỉ có 50 lần trải nghiệm rời rạc. Còn người chỉ trade một hai mã trong một năm, mỗi lần vào lệnh là một lần kiểm chứng thêm cho cùng một giả thuyết, sai thì sửa ngay giả thuyết đó, đúng thì củng cố thêm. Cá nhân tôi cũng chưa thấy một ai có lãi từ việc nhảy nhót liên tục từ mã này qua mã khác, nếu có thì đó là giai đoạn uptrend 2016 2017 hoặc 2020 2021 nhưng lợi nhuận rất mỏng và bị bào mòn bởi phí và lỗ.
 
-Nhưng chung thủy không có nghĩa là nhắm mắt chọn đại một mã rồi gắn bó cả đời với nó. Nếu trade chứng khoán mà chọn nhầm nhóm ngành, cả năm có khi lỗ chồng lỗ, vì bản thân nhóm ngành đó không có sóng để mà bắt.
+Nhưng chung thủy không có nghĩa là nhắm mắt chọn đại một mã rồi gắn bó cả đời với nó. Nếu trade chứng khoán mà chọn nhầm nhóm ngành cả năm sẽ lỗ chồng lỗ, vì bản thân nhóm ngành đó không có sóng để mà bắt.
 
 Bài toán hợp lý hơn là đi tìm ngành dẫn dắt, cổ phiếu đầu ngành, có câu chuyện, có triển vọng, và quan trọng nhất là giá đang nằm trong một xu hướng tăng rõ ràng. Tập trung giao dịch quanh nhóm này, khai thác nó cho đến khi chính xu hướng tăng đó bị gãy. Lúc đó mới tính chuyện đi tìm dòng tiền mới, chứ không phải nay thấy ngành này nóng thì nhảy vào, mai thấy ngành kia có tin thì nhảy sang.
 
