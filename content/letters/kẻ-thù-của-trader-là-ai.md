@@ -26,6 +26,3 @@ Biểu hiện thứ tư kín đáo và nguy hiểm hơn hẳn - tự tin thái q
 Biểu hiện thứ năm hay bị nhầm thành hiểu biết vĩ mô - đây là một ảo tưởng kiểm soát. Nắm được lịch họp lãi suất, nghe được tin đồn ngành, đọc được chu kỳ dòng tiền, cảm giác nắm thông tin rất dễ bị cái tôi biến thành cảm giác nắm chắc kết quả, che mờ hết các rủi ro và tiêu chuẩn khách quan.
 
 Và biểu hiện cuối cùng, tệ nhất trong tất cả là ngồi gõ bài phân tích dài để chứng minh lệnh thua hôm qua là lỗi của đội lái, của broker, của Chính phủ ... thay vì mở lại nhật ký giao dịch xem mình đã làm gì sai. Nếu đọc đến đây mà thấy hơi nhột, không sao, đó vốn là tác dụng phụ bình thường của một bài viết về cái tôi.
-
-
-*Đây là quan điểm cá nhân không phải khuyến nghị đầu tư.*
