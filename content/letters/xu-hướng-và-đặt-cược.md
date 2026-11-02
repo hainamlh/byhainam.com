@@ -1,5 +1,6 @@
 ---
 title: Xu hướng và đặt cược
+draft: true
 date: 2026-11-01
 dek: Bạn phải biết đặt cược hợp lý vào xu hướng
 read: 3 phút đọc
