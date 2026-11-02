@@ -2,8 +2,8 @@
 title: Công thức giao dịch
 draft: false
 date: 2026-11-02
-dek: Công thức giao dịch là các tiêu chí cứng, như một cộng một bằng hai, nó vừa
-  bảo vệ và cũng vừa giới hạn các giao dịch của bạn
+dek: Công thức giao dịch là các tiêu chí cứng, như một cộng một bằng hai, nhưng
+  nó không phải là tất cả
 read: 3 phút đọc
 image: /uploads/sufuu.jpg
 bg: light
