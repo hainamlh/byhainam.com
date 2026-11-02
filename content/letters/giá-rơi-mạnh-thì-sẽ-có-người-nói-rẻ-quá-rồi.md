@@ -1,5 +1,6 @@
 ---
 title: Giá rơi mạnh thì sẽ có người nói rẻ quá rồi
+draft: true
 date: 2026-10-31
 dek: Ghi chú
 read: 3 phút đọc
