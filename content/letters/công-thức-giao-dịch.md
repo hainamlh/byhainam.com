@@ -8,7 +8,7 @@ read: 3 phút đọc
 image: /uploads/sufuu.jpg
 bg: light
 ---
-Công thức giao dịch khác với phương pháp giao dịch. Phương pháp giao dịch là một tổng thể từ tư duy, suy nghĩ, nguyên lý, lợi nhuận, rủi ro kỳ vọng rồi cuối cùng mới đến tiêu chí vào lệnh, thoát lệnh.
+Công thức giao dịch khác với phương pháp giao dịch. Phương pháp giao dịch là một tổng thể từ bên trong tinh thần như tư duy, suy nghĩ, nguyên lý cho đến các yếu tố bên ngoài như việc thực thi các công thức vào lệnh, thoát lệnh. Có thể nói công thức giao dịch là tập con của phương pháp giao dịch. Công thức giao dịch đứng một mình sẽ không phát huy đúng được công dụng của nó.
 
 ![](/uploads/sufu.jpg)
 
