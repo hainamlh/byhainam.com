@@ -21,3 +21,8 @@ Công thức giao dịch khác với phương pháp giao dịch. Phương pháp 
 > Cùng một bí kíp, cùng những dòng chữ, nhưng kết quả lại hoàn toàn khác nhau. Vì trong võ học có hai thứ không thể tách rời, đó là **Tâm pháp và Chiêu thức.**
 >
 > Chiêu thức là những gì bạn nhìn thấy, có thể học thuộc và bắt chước. Tâm pháp là những nguyên lý ẩn sâu bên trong, quyết định cách bạn vận dụng và phát triển những chiêu thức ấy. Người chỉ học chiêu thức có thể thắng một vài trận đấu. Nhưng người hiểu được tâm pháp mới có thể tự sáng tạo chiêu thức, tùy cơ ứng biến và tiến đến cảnh giới cao hơn.
+
+| Nguyên lý | Công thức |
+| --- | --- |
+| Giao dịch theo xu hướng | Xác định xu hướng bằng đáy đỉnh, MA200 |
+| Tư duy lợi nhuận | Không mua đáy bán đỉnh, mà ăn phần thân |
