@@ -1,5 +1,6 @@
 ---
 title: Lướt sóng T+ hay nắm giữ dài hạn?
+draft: true
 date: 2026-10-30
 dek: Lướt sóng T+ hay nắm giữ dài hạn, cái nào có lợi hơn?
 read: 5 phút đọc
