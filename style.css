@@ -200,6 +200,13 @@ img{max-width:100%;display:block}
   margin:32px 0;padding:4px 0 4px 22px;border-left:2px solid var(--green);
   font-family:var(--font-base);font-style:italic;font-weight:400;font-size:17px;color:var(--ink);line-height:1.85;
 }
+.post-body table{
+  width:100%;border-collapse:collapse;font-size:15px;line-height:1.6;margin:32px 0;
+  display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;
+}
+.post-body th,.post-body td{text-align:left;padding:10px 16px;border:1px solid var(--line);white-space:nowrap}
+.post-body th{font-weight:600;color:var(--ink);background:var(--card)}
+.post-body td{color:var(--ink-75)}
 .post-cta{
   margin-top:8px;padding:28px 26px;background:var(--card);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
 }

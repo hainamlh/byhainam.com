@@ -69,6 +69,8 @@ collections:
         widget: "markdown"
         buttons: ["bold", "italic", "link", "heading-one", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
+        modes: ["rich_text", "raw"]
+        hint: 'Muốn chèn bảng (table): bấm nút "Markdown" ở góc phải thanh công cụ để chuyển sang chế độ gõ thô, rồi dán mẫu dạng "| Cột 1 | Cột 2 |" xuống dòng "|---|---|" xuống dòng "| A | 1 |" — mỗi dòng là 1 hàng, các ô cách nhau bằng dấu |. Bấm "Rich Text" để quay lại chế độ soạn thường.'
 
   - name: "books"
     label: "Đọc sách"
